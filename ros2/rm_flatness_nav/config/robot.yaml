@@ -1,0 +1,17 @@
+# Values measured on Ziad's RoboMaster EP (2026-10-26). See CLAUDE.md / report for how.
+tag_detector:
+  ros__parameters:
+    target_id: 3
+    tag_size: 0.155            # measured black edge of the printed tag (m)
+    quad_decimate: 1.0
+    init_arm: false            # arm is set by hand 2 cm above the ToF sensor (the A2 pose hits it)
+    extrinsics: tag            # camera pose from the floor tag, not the (wrong) arm TF
+    camera_pitch_deg: 6.3      # from the floor tag at arm x 0.141, z 0.060
+    range_scale: 1.0           # chassis-front distance = scale * camera forward + offset
+    range_offset: -0.149       # updated after the range calibration fit
+flatness_planner:
+  ros__parameters:
+    control_rate: 20.0
+    log_period: 1.0
+    log_after_arrival: 3.0
+    search_dir: 1.0

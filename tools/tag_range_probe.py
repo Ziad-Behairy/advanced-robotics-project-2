@@ -33,18 +33,25 @@ def main():
     node = rclpy.create_node('tag_range_probe')
     buf = Buffer()
     TransformListener(buf, node)
-    pts = []
-    node.create_subscription(PointStamped, 'tag/point', lambda m: pts.append((m.point.x, m.point.y, m.point.z)), 10)
+    pts, frames = [], set()
+
+    def on_point(m):
+        pts.append((m.point.x, m.point.y, m.point.z))
+        frames.add(m.header.frame_id)
+    node.create_subscription(PointStamped, 'tag/point', on_point, 10)
     t0 = time.time()
     while time.time() - t0 < args.secs:
         rclpy.spin_once(node, timeout_sec=0.05)
     if not pts:
         print(f'tape {args.tape:.3f} m | NOT DETECTED in {args.secs:.0f} s')
         return
-    tf = buf.lookup_transform('base_link', 'camera_optical_link', rclpy.time.Time())
-    q, tr = tf.transform.rotation, tf.transform.translation
-    rot, t = quat_to_rot(q.x, q.y, q.z, q.w), np.array([tr.x, tr.y, tr.z])
-    p_cam = np.array([rot.T @ (np.array(p) - t) for p in pts])
+    if frames == {'camera_level'}:
+        p_cam = np.array(pts)          # same length as in the optical frame (pure rotation)
+    else:                              # base_link via the driver TF: undo it
+        tf = buf.lookup_transform('base_link', 'camera_optical_link', rclpy.time.Time())
+        q, tr = tf.transform.rotation, tf.transform.translation
+        rot, t = quat_to_rot(q.x, q.y, q.z, q.w), np.array([tr.x, tr.y, tr.z])
+        p_cam = np.array([rot.T @ (np.array(p) - t) for p in pts])
     slant = np.linalg.norm(p_cam, axis=1)
     d_front = np.sqrt(np.maximum(slant**2 - args.height**2, 0.0)) - CAM_BEHIND_FRONT
     rate = len(pts) / args.secs

@@ -25,7 +25,8 @@ from sensor_msgs.msg import CameraInfo, Image
 from std_msgs.msg import Float32MultiArray
 from tf2_ros import Buffer, TransformException, TransformListener
 
-from rm_flatness_nav.geometry import camera_from_floor_tag, quat_to_rot, range_bearing, transform_point
+from rm_flatness_nav.geometry import (camera_from_floor_tag, camera_to_level, quat_to_rot, range_bearing,
+                                      transform_point)
 
 
 class TagDetector(Node):
@@ -37,6 +38,13 @@ class TagDetector(Node):
         self.base_frame = self.declare_parameter('base_frame', 'base_link').value
         self.rate = self.declare_parameter('rate', 15.0).value
         self.decimate = self.declare_parameter('quad_decimate', 1.0).value
+        # Camera pose. 'tag' (default): fixed values measured from the floor tag at the arm pose in use
+        # (the arm TF of this robot is wrong). 'tf': use the driver TF base_link <- camera_optical_link.
+        self.extrinsics = self.declare_parameter('extrinsics', 'tag').value
+        self.cam_pitch = np.radians(self.declare_parameter('camera_pitch_deg', 6.3).value)
+        # distance from the chassis front = range_scale * camera floor-forward distance + range_offset
+        self.range_scale = self.declare_parameter('range_scale', 1.0).value
+        self.range_offset = self.declare_parameter('range_offset', -0.149).value
         self.init_arm = self.declare_parameter('init_arm', False).value
         self.arm_x = self.declare_parameter('arm_x', 0.105).value  # m, SDK X
         self.arm_z = self.declare_parameter('arm_z', 0.030).value  # m, SDK Y (up)
@@ -154,21 +162,28 @@ class TagDetector(Node):
             return
         self.floor_est = camera_from_floor_tag(target.pose_R, target.pose_t)
 
-        try:
-            tf = self.tf_buffer.lookup_transform(self.base_frame, msg.header.frame_id, rclpy.time.Time())
-        except TransformException as e:
-            self.get_logger().warn(f'No TF {msg.header.frame_id} -> {self.base_frame}: {e}',
-                                   throttle_duration_sec=2.0)
-            return
-        q, t = tf.transform.rotation, tf.transform.translation
-        p_base = transform_point(quat_to_rot(q.x, q.y, q.z, q.w), (t.x, t.y, t.z), target.pose_t.ravel())
-        d, bearing = range_bearing(p_base)
+        if self.extrinsics == 'tf':
+            try:
+                tf = self.tf_buffer.lookup_transform(self.base_frame, msg.header.frame_id, rclpy.time.Time())
+            except TransformException as e:
+                self.get_logger().warn(f'No TF {msg.header.frame_id} -> {self.base_frame}: {e}',
+                                       throttle_duration_sec=2.0)
+                return
+            q, t = tf.transform.rotation, tf.transform.translation
+            p_out = transform_point(quat_to_rot(q.x, q.y, q.z, q.w), (t.x, t.y, t.z), target.pose_t.ravel())
+            d, bearing = range_bearing(p_out)
+            frame = self.base_frame
+        else:
+            p_out = camera_to_level(target.pose_t, self.cam_pitch)   # (forward, left, up) at the camera
+            d = self.range_scale * p_out[0] + self.range_offset      # distance from the chassis front
+            bearing = float(np.arctan2(p_out[1], p_out[0]))
+            frame = 'camera_level'
         self.n_hits += 1
 
         pt = PointStamped()
         pt.header.stamp = msg.header.stamp
-        pt.header.frame_id = self.base_frame
-        pt.point.x, pt.point.y, pt.point.z = (float(v) for v in p_base)
+        pt.header.frame_id = frame
+        pt.point.x, pt.point.y, pt.point.z = (float(v) for v in p_out)
         self.point_pub.publish(pt)
         # [d, bearing, decision_margin, image_stamp_sec]: the stamp lets the planner measure tag age
         stamp = msg.header.stamp.sec + 1e-9 * msg.header.stamp.nanosec

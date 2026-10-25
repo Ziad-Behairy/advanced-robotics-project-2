@@ -47,3 +47,14 @@ def test_slant_range_overshoots_standoff():
     p_cam = rot.T @ (np.array([0.20, 0.0, 0.0]) - trans)
     assert np.linalg.norm(p_cam) == pytest.approx(0.32, abs=0.01)
     assert range_bearing(transform_point(rot, trans, p_cam))[0] == pytest.approx(0.20)
+
+
+def test_camera_to_level_round_trip():
+    from rm_flatness_nav.geometry import camera_to_level
+    pitch = np.radians(6.3)
+    # floor point 0.9 m ahead, 0.1 m left, 0.313 m below the camera, expressed in the pitched optical frame
+    fwd, left, up = 0.9, 0.1, -0.313
+    z = fwd * np.cos(pitch) - up * np.sin(pitch)
+    y = -fwd * np.sin(pitch) - up * np.cos(pitch)
+    x = -left
+    assert np.allclose(camera_to_level([x, y, z], pitch), [fwd, left, up])

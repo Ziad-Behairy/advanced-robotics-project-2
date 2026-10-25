@@ -36,3 +36,11 @@ def camera_from_floor_tag(tag_rot, tag_t):
     pitch_down = float(np.arcsin(-n[2]))        # optical axis angle below the horizon
     roll = float(np.arctan2(n[0], -n[1]))       # 0 when the image x axis is level
     return height, pitch_down, roll
+
+
+def camera_to_level(p_cam, pitch_down):
+    """Point from the optical frame (x right, y down, z forward) of a camera pitched down by pitch_down (rad)
+    to a level frame at the camera: (forward, left, up)."""
+    x, y, z = (float(v) for v in np.asarray(p_cam).ravel())
+    c, s = np.cos(pitch_down), np.sin(pitch_down)
+    return z * c - y * s, -x, -y * c - z * s

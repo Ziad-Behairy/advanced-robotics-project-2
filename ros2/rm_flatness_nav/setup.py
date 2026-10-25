@@ -24,6 +24,7 @@ setup(
     entry_points={
         'console_scripts': [
             'tag_detector = rm_flatness_nav.tag_detector:main',
+            'flatness_planner = rm_flatness_nav.planner:main',
         ],
     },
 )
