@@ -1,0 +1,26 @@
+# ROS build output
+build/
+install/
+log/
+# Python
+__pycache__/
+*.pyc
+# Raw bags are large: keep them local, commit only exported CSVs
+data/**/bags/
+# LaTeX build files
+report/**/*.aux
+report/**/*.log
+report/**/*.out
+report/**/*.toc
+report/**/*.fls
+report/**/*.fdb_latexmk
+report/**/*.synctex.gz
+# Large video files (upload the final cut, keep only the link in video/README.md)
+video/*.mp4
+video/*.mov
+video/*.mkv
+# Editor settings
+.vscode/
+# Local assistant notes (not part of the submission)
+CLAUDE.md
+submission/
