@@ -15,3 +15,6 @@ flatness_planner:
     log_period: 1.0
     log_after_arrival: 3.0
     search_dir: 1.0
+    arm_x_saved: 0.123         # arm_position at which the camera was calibrated (2026-10-26, set by hand)
+    arm_z_saved: 0.067
+    arm_tolerance: 0.006

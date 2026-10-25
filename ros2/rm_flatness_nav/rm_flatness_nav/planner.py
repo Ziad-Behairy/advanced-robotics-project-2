@@ -1,6 +1,8 @@
 """Planner node (A2 Problems 1-3): mission state machine, flat-output pursuit, brake and voltage logging.
 
-- Inputs: tag/range_bearing (tag_detector), range_0 (front ToF), odom.
+- Inputs: tag/range_bearing (tag_detector), range_0 (front ToF), odom, arm_position.
+- Arm guard: the camera calibration is only valid at the saved arm pose. The mission does not start until
+  arm_position matches it, and brakes for good if the arm moves away from it. This node never moves the arm.
 - Output: cmd_vel at control_rate. Every exit path (normal stop, Ctrl+C, exception) sends zero velocity.
 - Every control tick the commanded (v, omega) is mapped to wheel rates (eq. 4) and armature voltages (eq. 5),
   with dt = the control period. Every log_period seconds one row is printed and written to
@@ -11,7 +13,7 @@ import os
 import time
 
 import rclpy
-from geometry_msgs.msg import Twist
+from geometry_msgs.msg import PointStamped, Twist
 from rclpy.signals import SignalHandlerOptions
 from nav_msgs.msg import Odometry
 from rclpy.node import Node
@@ -32,6 +34,11 @@ class Planner(Node):
         self.after_arrival = self.declare_parameter('log_after_arrival', 3.0).value  # s of 0 V rows
         out_dir = os.path.expanduser(self.declare_parameter('output_dir', '~/advanced_robotics_project_2/data/runs').value)
         search_dir = self.declare_parameter('search_dir', 1.0).value  # +1 CCW (left) when never seen
+        self.arm_saved = (self.declare_parameter('arm_x_saved', 0.123).value,
+                          self.declare_parameter('arm_z_saved', 0.067).value)
+        self.arm_tol = self.declare_parameter('arm_tolerance', 0.006).value  # m
+        self.arm_pos = None
+        self.arm_ok_once = False
 
         self.mission = Mission(MissionParams(), search_dir=search_dir)
         self.volts = VoltageModel()
@@ -55,6 +62,7 @@ class Planner(Node):
         self.create_subscription(Float32MultiArray, 'tag/range_bearing', self.on_tag, 10)
         self.create_subscription(Range, 'range_0', self.on_tof, qos_profile_sensor_data)
         self.create_subscription(Odometry, 'odom', self.on_odom, 10)
+        self.create_subscription(PointStamped, 'arm_position', self.on_arm, 10)
 
         self.t0 = self.now()
         self.next_log = 0.0
@@ -77,10 +85,34 @@ class Planner(Node):
     def on_odom(self, msg):
         self.odom_xy = (msg.pose.pose.position.x, msg.pose.pose.position.y)
 
+    def on_arm(self, msg):
+        self.arm_pos = (msg.point.x, msg.point.z)
+
+    def arm_error(self):
+        if self.arm_pos is None:
+            return None
+        return ((self.arm_pos[0] - self.arm_saved[0]) ** 2 + (self.arm_pos[1] - self.arm_saved[1]) ** 2) ** 0.5
+
     def tick(self):
         if self.done:
             return
         now = self.now()
+        err = self.arm_error()
+        if not self.arm_ok_once:
+            if err is None or err > self.arm_tol:
+                self.send(0.0, 0.0)
+                what = 'no arm_position yet' if err is None else (
+                    f'arm at x={self.arm_pos[0]:.3f} z={self.arm_pos[1]:.3f}, saved x={self.arm_saved[0]:.3f} '
+                    f'z={self.arm_saved[1]:.3f} ({err * 1000:.0f} mm off)')
+                self.get_logger().warn(f'Waiting: {what}. Camera calibration needs the saved arm pose.',
+                                       throttle_duration_sec=2.0)
+                self.t0 = now
+                return
+            self.arm_ok_once = True
+            self.get_logger().info(f'Arm pose OK ({err * 1000:.1f} mm from saved). Mission starts.')
+        elif err is not None and err > self.arm_tol:
+            self.get_logger().error(f'Arm moved {err * 1000:.0f} mm from the saved pose: braking, mission aborted.')
+            self.mission.state, self.mission.brake_reason = ARRIVED, 'arm moved'
         prev_state = self.mission.state
         v, w = self.mission.step(now, self.odom_xy)
         self.send(v, w)
