@@ -3,6 +3,10 @@
 - Inputs: tag/range_bearing (tag_detector), range_0 (front ToF), odom, arm_position.
 - Arm guard: the camera calibration is only valid at the saved arm pose. The mission does not start until
   arm_position matches it, and brakes for good if the arm moves away from it. This node never moves the arm.
+- Frames: the mission body +X is the camera/gripper side (toward the tag, Fig. 1 of the assignment). On this
+  robot the driver's +x is the opposite side (checked with the wheels in the air), so cmd_vel.linear.x =
+  drive_sign * v with drive_sign = -1. omega keeps its sign: a CCW turn moves the camera view left either way.
+  v, omega, wheel rates and voltages are logged in the mission frame (eq. 4 with v > 0 toward the tag).
 - Output: cmd_vel at control_rate. Every exit path (normal stop, Ctrl+C, exception) sends zero velocity.
 - Every control tick the commanded (v, omega) is mapped to wheel rates (eq. 4) and armature voltages (eq. 5),
   with dt = the control period. Every log_period seconds one row is printed and written to
@@ -34,6 +38,7 @@ class Planner(Node):
         self.after_arrival = self.declare_parameter('log_after_arrival', 3.0).value  # s of 0 V rows
         out_dir = os.path.expanduser(self.declare_parameter('output_dir', '~/advanced_robotics_project_2/data/runs').value)
         search_dir = self.declare_parameter('search_dir', 1.0).value  # +1 CCW (left) when never seen
+        self.drive_sign = self.declare_parameter('drive_sign', -1.0).value  # driver +x is away from the camera
         self.arm_saved = (self.declare_parameter('arm_x_saved', 0.123).value,
                           self.declare_parameter('arm_z_saved', 0.067).value)
         self.arm_tol = self.declare_parameter('arm_tolerance', 0.006).value  # m
@@ -146,7 +151,7 @@ class Planner(Node):
 
     def send(self, v, w):
         cmd = Twist()
-        cmd.linear.x = float(v)
+        cmd.linear.x = float(self.drive_sign * v)
         cmd.angular.z = float(w)
         self.cmd_pub.publish(cmd)
 

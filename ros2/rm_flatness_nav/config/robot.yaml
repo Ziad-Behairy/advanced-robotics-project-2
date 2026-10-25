@@ -15,6 +15,7 @@ flatness_planner:
     log_period: 1.0
     log_after_arrival: 3.0
     search_dir: 1.0
+    drive_sign: -1.0           # driver +x points AWAY from the camera/tag (2 s wheels-in-air test, 2026-10-26)
     arm_x_saved: 0.123         # arm_position at which the camera was calibrated (2026-10-26, set by hand)
     arm_z_saved: 0.067
     arm_tolerance: 0.006
