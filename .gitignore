@@ -2,7 +2,7 @@
 build/
 install/
 log/
-# Python
+# Python and build leftovers
 __pycache__/
 *.pyc
 # Raw bags are large: keep them local, commit only exported CSVs
@@ -24,3 +24,5 @@ video/*.mkv
 # Local assistant notes (not part of the submission)
 CLAUDE.md
 submission/
+*.egg-info/
+.pytest_cache/
