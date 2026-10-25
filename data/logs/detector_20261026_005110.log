@@ -40,3 +40,65 @@
 [INFO] [1792965267.633910283] [tag_detector]: 9.6 frames/s processed, T3 seen in 48 | camera from tag: height 0.319 m, pitch +7.9 deg down, roll +0.1 deg
 [INFO] [1792965272.613758962] [tag_detector]: 13.8 frames/s processed, T3 seen in 69 | camera from tag: height 0.319 m, pitch +7.9 deg down, roll +0.2 deg
 [INFO] [1792965277.612127455] [tag_detector]: 15.0 frames/s processed, T3 seen in 75 | camera from tag: height 0.319 m, pitch +7.9 deg down, roll +0.2 deg
+[INFO] [1792965282.633451197] [tag_detector]: 9.8 frames/s processed, T3 seen in 49 | camera from tag: height 0.319 m, pitch +7.9 deg down, roll +0.2 deg
+[INFO] [1792965287.617730893] [tag_detector]: 13.8 frames/s processed, T3 seen in 69 | camera from tag: height 0.319 m, pitch +7.9 deg down, roll +0.2 deg
+[INFO] [1792965292.616771597] [tag_detector]: 15.0 frames/s processed, T3 seen in 75 | camera from tag: height 0.321 m, pitch +8.0 deg down, roll +0.1 deg
+[INFO] [1792965297.610828232] [tag_detector]: 9.2 frames/s processed, T3 seen in 46 | camera from tag: height 0.321 m, pitch +7.9 deg down, roll +0.2 deg
+[INFO] [1792965302.606298923] [tag_detector]: 13.4 frames/s processed, T3 seen in 67 | camera from tag: height 0.314 m, pitch +7.7 deg down, roll +0.2 deg
+[INFO] [1792965307.623618363] [tag_detector]: 14.8 frames/s processed, T3 seen in 74 | camera from tag: height 0.322 m, pitch +8.0 deg down, roll +0.2 deg
+[INFO] [1792965312.635645454] [tag_detector]: 10.4 frames/s processed, T3 seen in 52 | camera from tag: height 0.319 m, pitch +7.9 deg down, roll +0.2 deg
+[INFO] [1792965317.621798978] [tag_detector]: 13.6 frames/s processed, T3 seen in 68 | camera from tag: height 0.322 m, pitch +8.0 deg down, roll +0.2 deg
+[INFO] [1792965322.617534401] [tag_detector]: 15.0 frames/s processed, T3 seen in 75 | camera from tag: height 0.318 m, pitch +7.9 deg down, roll +0.2 deg
+[INFO] [1792965327.633496431] [tag_detector]: 11.0 frames/s processed, T3 seen in 55 | camera from tag: height 0.319 m, pitch +7.9 deg down, roll +0.1 deg
+[INFO] [1792965332.618539742] [tag_detector]: 13.6 frames/s processed, T3 seen in 68 | camera from tag: height 0.320 m, pitch +7.9 deg down, roll +0.2 deg
+[INFO] [1792965337.613719218] [tag_detector]: 15.0 frames/s processed, T3 seen in 75 | camera from tag: height 0.322 m, pitch +8.0 deg down, roll +0.3 deg
+[INFO] [1792965342.622063541] [tag_detector]: 10.6 frames/s processed, T3 seen in 53 | camera from tag: height 0.319 m, pitch +7.9 deg down, roll +0.2 deg
+[INFO] [1792965347.620977538] [tag_detector]: 13.8 frames/s processed, T3 seen in 69 | camera from tag: height 0.319 m, pitch +7.9 deg down, roll +0.2 deg
+[INFO] [1792965352.613278554] [tag_detector]: 15.0 frames/s processed, T3 seen in 75 | camera from tag: height 0.320 m, pitch +7.9 deg down, roll +0.2 deg
+[INFO] [1792965357.630936116] [tag_detector]: 11.2 frames/s processed, T3 seen in 56 | camera from tag: height 0.318 m, pitch +7.8 deg down, roll +0.2 deg
+[INFO] [1792965362.615885550] [tag_detector]: 14.0 frames/s processed, T3 seen in 70 | camera from tag: height 0.320 m, pitch +7.9 deg down, roll +0.2 deg
+[INFO] [1792965367.608534164] [tag_detector]: 14.6 frames/s processed, T3 seen in 73 | camera from tag: height 0.319 m, pitch +7.8 deg down, roll +0.2 deg
+[INFO] [1792965372.635734188] [tag_detector]: 10.4 frames/s processed, T3 seen in 52 | camera from tag: height 0.320 m, pitch +7.9 deg down, roll +0.1 deg
+[INFO] [1792965377.608026705] [tag_detector]: 13.6 frames/s processed, T3 seen in 68 | camera from tag: height 0.312 m, pitch +7.6 deg down, roll +0.1 deg
+[INFO] [1792965382.622184451] [tag_detector]: 14.8 frames/s processed, T3 seen in 74 | camera from tag: height 0.321 m, pitch +7.9 deg down, roll +0.3 deg
+[INFO] [1792965387.574634280] [tag_detector]: 10.0 frames/s processed, T3 seen in 50 | camera from tag: height 0.318 m, pitch +7.9 deg down, roll +0.2 deg
+[INFO] [1792965392.619958048] [tag_detector]: 14.0 frames/s processed, T3 seen in 70 | camera from tag: height 0.320 m, pitch +7.9 deg down, roll +0.1 deg
+[INFO] [1792965397.622462645] [tag_detector]: 14.8 frames/s processed, T3 seen in 74 | camera from tag: height 0.321 m, pitch +8.0 deg down, roll +0.2 deg
+[INFO] [1792965402.615933062] [tag_detector]: 11.2 frames/s processed, T3 seen in 56 | camera from tag: height 0.319 m, pitch +7.9 deg down, roll +0.2 deg
+[INFO] [1792965407.618140437] [tag_detector]: 13.8 frames/s processed, T3 seen in 69 | camera from tag: height 0.320 m, pitch +7.9 deg down, roll +0.2 deg
+[INFO] [1792965412.621572672] [tag_detector]: 15.0 frames/s processed, T3 seen in 75 | camera from tag: height 0.319 m, pitch +7.9 deg down, roll +0.1 deg
+[INFO] [1792965417.623926810] [tag_detector]: 10.4 frames/s processed, T3 seen in 52 | camera from tag: height 0.321 m, pitch +7.9 deg down, roll +0.2 deg
+[INFO] [1792965422.617891198] [tag_detector]: 14.0 frames/s processed, T3 seen in 70 | camera from tag: height 0.320 m, pitch +7.9 deg down, roll +0.2 deg
+[INFO] [1792965427.628657021] [tag_detector]: 14.4 frames/s processed, T3 seen in 72 | camera from tag: height 0.317 m, pitch +7.8 deg down, roll +0.1 deg
+[INFO] [1792965432.632041817] [tag_detector]: 10.4 frames/s processed, T3 seen in 52 | camera from tag: height 0.320 m, pitch +7.9 deg down, roll +0.2 deg
+[INFO] [1792965437.610327319] [tag_detector]: 13.8 frames/s processed, T3 seen in 69 | camera from tag: height 0.321 m, pitch +8.0 deg down, roll +0.1 deg
+[INFO] [1792965442.626456497] [tag_detector]: 14.8 frames/s processed, T3 seen in 74 | camera from tag: height 0.319 m, pitch +7.9 deg down, roll +0.1 deg
+[INFO] [1792965447.624636002] [tag_detector]: 9.8 frames/s processed, T3 seen in 49 | camera from tag: height 0.322 m, pitch +8.0 deg down, roll +0.1 deg
+[INFO] [1792965452.625896411] [tag_detector]: 13.2 frames/s processed, T3 seen in 66 | camera from tag: height 0.322 m, pitch +8.0 deg down, roll +0.3 deg
+[INFO] [1792965457.624675325] [tag_detector]: 14.4 frames/s processed, T3 seen in 72 | camera from tag: height 0.321 m, pitch +7.9 deg down, roll +0.3 deg
+[INFO] [1792965462.613624915] [tag_detector]: 11.4 frames/s processed, T3 seen in 57 | camera from tag: height 0.322 m, pitch +8.0 deg down, roll +0.2 deg
+[INFO] [1792965467.621323197] [tag_detector]: 13.6 frames/s processed, T3 seen in 68 | camera from tag: height 0.319 m, pitch +7.9 deg down, roll +0.2 deg
+[INFO] [1792965472.623988250] [tag_detector]: 15.0 frames/s processed, T3 seen in 75 | camera from tag: height 0.322 m, pitch +8.0 deg down, roll +0.3 deg
+[INFO] [1792965477.625801216] [tag_detector]: 10.8 frames/s processed, T3 seen in 54 | camera from tag: height 0.319 m, pitch +7.9 deg down, roll +0.1 deg
+[INFO] [1792965482.614296687] [tag_detector]: 13.4 frames/s processed, T3 seen in 67 | camera from tag: height 0.320 m, pitch +7.9 deg down, roll +0.2 deg
+[INFO] [1792965487.631012494] [tag_detector]: 15.0 frames/s processed, T3 seen in 75 | camera from tag: height 0.318 m, pitch +7.8 deg down, roll +0.1 deg
+Traceback (most recent call last):
+  File "/home/elzoz/ros2_ws/install/rm_flatness_nav/lib/rm_flatness_nav/tag_detector", line 33, in <module>
+    sys.exit(load_entry_point('rm-flatness-nav', 'console_scripts', 'tag_detector')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/elzoz/ros2_ws/build/rm_flatness_nav/rm_flatness_nav/tag_detector.py", line 205, in main
+    def report(self):
+        ^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 247, in spin
+    executor.spin_once()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 926, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 907, in _spin_once_impl
+    handler, entity, node = self.wait_for_ready_callbacks(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 877, in wait_for_ready_callbacks
+    return next(self._cb_iter)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 785, in _wait_for_ready_callbacks
+    raise ExternalShutdownException()
+rclpy.executors.ExternalShutdownException

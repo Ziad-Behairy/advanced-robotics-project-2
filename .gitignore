@@ -26,3 +26,5 @@ CLAUDE.md
 submission/
 *.egg-info/
 .pytest_cache/
+# Replay frames (large, regenerated per run)
+data/**/frames_*/

@@ -1,0 +1,63 @@
+[INFO] [1792967428.617124195] [tag_detector]: Camera intrinsics 1280x720: fx=628.6 fy=625.8 cx=638.0 cy=361.6
+[INFO] [1792967433.253248843] [tag_detector]: 13.6 frames/s processed, T3 seen in 0
+[INFO] [1792967438.253092994] [tag_detector]: 14.8 frames/s processed, T3 seen in 0
+[INFO] [1792967443.253757448] [tag_detector]: 9.2 frames/s processed, T3 seen in 0
+[INFO] [1792967448.253609384] [tag_detector]: 14.6 frames/s processed, T3 seen in 0
+[INFO] [1792967453.253704592] [tag_detector]: 14.8 frames/s processed, T3 seen in 0
+[INFO] [1792967458.253146938] [tag_detector]: 9.4 frames/s processed, T3 seen in 0
+[INFO] [1792967463.253081822] [tag_detector]: 14.0 frames/s processed, T3 seen in 0
+[INFO] [1792967468.252934587] [tag_detector]: 14.8 frames/s processed, T3 seen in 0
+[INFO] [1792967473.271685705] [tag_detector]: 10.0 frames/s processed, T3 seen in 0
+[INFO] [1792967478.245413106] [tag_detector]: 14.4 frames/s processed, T3 seen in 0
+[INFO] [1792967483.253591999] [tag_detector]: 15.0 frames/s processed, T3 seen in 0
+[INFO] [1792967488.252634593] [tag_detector]: 9.4 frames/s processed, T3 seen in 0
+[INFO] [1792967493.254986151] [tag_detector]: 14.2 frames/s processed, T3 seen in 0
+[INFO] [1792967498.254964021] [tag_detector]: 15.0 frames/s processed, T3 seen in 0
+[INFO] [1792967503.261321786] [tag_detector]: 9.6 frames/s processed, T3 seen in 0
+[INFO] [1792967508.260499720] [tag_detector]: 14.2 frames/s processed, T3 seen in 0
+[INFO] [1792967513.257505668] [tag_detector]: 14.8 frames/s processed, T3 seen in 0
+[INFO] [1792967518.279344538] [tag_detector]: 9.8 frames/s processed, T3 seen in 0
+[INFO] [1792967523.258121188] [tag_detector]: 13.4 frames/s processed, T3 seen in 0
+[INFO] [1792967528.259385482] [tag_detector]: 14.8 frames/s processed, T3 seen in 0
+[INFO] [1792967533.255539209] [tag_detector]: 9.4 frames/s processed, T3 seen in 0
+[INFO] [1792967538.255208071] [tag_detector]: 14.2 frames/s processed, T3 seen in 0
+[INFO] [1792967543.268155210] [tag_detector]: 15.0 frames/s processed, T3 seen in 0
+[INFO] [1792967548.260706972] [tag_detector]: 9.0 frames/s processed, T3 seen in 0
+[INFO] [1792967553.262883462] [tag_detector]: 14.2 frames/s processed, T3 seen in 0
+[INFO] [1792967558.255536869] [tag_detector]: 14.4 frames/s processed, T3 seen in 0
+[INFO] [1792967563.255275358] [tag_detector]: 11.0 frames/s processed, T3 seen in 0
+[INFO] [1792967568.258697719] [tag_detector]: 14.4 frames/s processed, T3 seen in 0
+[INFO] [1792967573.257036400] [tag_detector]: 14.6 frames/s processed, T3 seen in 0
+[INFO] [1792967578.253651336] [tag_detector]: 10.4 frames/s processed, T3 seen in 0
+[INFO] [1792967583.259940587] [tag_detector]: 14.2 frames/s processed, T3 seen in 0
+[INFO] [1792967588.265335530] [tag_detector]: 15.0 frames/s processed, T3 seen in 0
+[INFO] [1792967593.250220135] [tag_detector]: 9.4 frames/s processed, T3 seen in 0
+Traceback (most recent call last):
+  File "/home/elzoz/ros2_ws/install/rm_flatness_nav/lib/rm_flatness_nav/tag_detector", line 33, in <module>
+    sys.exit(load_entry_point('rm-flatness-nav', 'console_scripts', 'tag_detector')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/elzoz/ros2_ws/build/rm_flatness_nav/rm_flatness_nav/tag_detector.py", line 234, in main
+    rclpy.spin(node)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 247, in spin
+    executor.spin_once()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 926, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 918, in _spin_once_impl
+    raise handler.exception()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/task.py", line 286, in _execute_coroutine_step
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 592, in handler
+    await call_coroutine()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 454, in _execute
+    await await_or_execute(tmr.callback)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 115, in await_or_execute
+    return callback(*args)
+           ^^^^^^^^^^^^^^^
+  File "/home/elzoz/ros2_ws/build/rm_flatness_nav/rm_flatness_nav/tag_detector.py", line 166, in process
+    want_pub = self.debug_pub.get_subscription_count() > 0
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/publisher.py", line 79, in get_subscription_count
+    return self.__publisher.get_subscription_count()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rclpy._rclpy_pybind11.RCLError: failed to get subscription count: publisher's context is invalid, at ./src/rcl/publisher.c:423

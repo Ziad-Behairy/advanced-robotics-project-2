@@ -13,3 +13,11 @@
 [robomaster_driver-1] [INFO] [1792965044.407584933] [robomaster]: [Chassis] Topic cmd_vel will control chassis twist
 [robomaster_driver-1] [INFO] [1792965044.823176899] [robomaster]: Enabled modules: Arm, Battery, Camera, Chassis, Gripper, LED, Speaker, ToF
 [robomaster_driver-1] [INFO] [1792965073.850158688] [robomaster]: [Camera] Started video stream with resolution 720p
+[robomaster_driver-1] [INFO] [1792965493.636420812] [robomaster]: [Camera] Stopped video stream
+[robomaster_driver-1] [INFO] [1792965509.117211362] [robomaster]: [Camera] Started video stream with resolution 720p
+[robomaster_driver-1] [INFO] [1792966075.420357103] [robomaster]: [Camera] Stopped video stream
+[robomaster_driver-1] [INFO] [1792966084.982935678] [robomaster]: [Camera] Started video stream with resolution 720p
+[robomaster_driver-1] [INFO] [1792967419.687586526] [robomaster]: [Camera] Stopped video stream
+[robomaster_driver-1] [INFO] [1792967428.432405141] [robomaster]: [Camera] Started video stream with resolution 720p
+[robomaster_driver-1] [INFO] [1792967598.518190263] [robomaster]: [Camera] Stopped video stream
+[robomaster_driver-1] [INFO] [1792967603.430063180] [robomaster]: [Camera] Started video stream with resolution 720p
