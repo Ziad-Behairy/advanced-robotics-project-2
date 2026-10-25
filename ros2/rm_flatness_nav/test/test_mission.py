@@ -83,3 +83,16 @@ def test_tof_brake_overrides_plan():
 def test_arrived_holds_zero():
     m, _, _, _ = simulate((1.6, 0.0))
     assert m.step(1000.0, (5.0, 5.0)) == (0.0, 0.0)
+
+
+def test_short_dropout_while_chasing_keeps_plan():
+    m = Mission()
+    for k in range(4):                      # centered detections -> CHASING
+        m.on_tag(0.1 * k, 1.5, 0.0)
+        m.step(0.1 * k, (0.0, 0.0))
+    assert m.state == CHASING
+    t0 = m.chase_t0
+    v, _ = m.step(t0 + 1.0, (0.05, 0.0))   # 1 s without the tag: still chasing on the plan
+    assert m.state == CHASING and v > 0
+    m.step(t0 + 2.0, (0.10, 0.0))          # > 1.5 s without the tag, far from goal: search
+    assert m.state == SEARCHING

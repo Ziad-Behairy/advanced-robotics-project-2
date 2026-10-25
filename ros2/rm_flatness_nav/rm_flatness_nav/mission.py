@@ -14,7 +14,10 @@ Brake (ARRIVED) as soon as any of these holds:
 - odometry shows the robot has covered the planned distance d0 - 0.20,
 - the plan time T has elapsed (the plan itself ends at zero speed).
 Near the end the floor tag leaves the camera view (camera blind zone), so losing the tag after the plan has
-brought the robot within blind_zone of the standoff point does not abort the chase.
+brought the robot within blind_zone of the standoff point does not abort the chase. Farther out, short
+detection dropouts (the 155 mm floor tag gives ~4 detections/s at 1.5 m) are tolerated for up to
+chase_lost_timeout while the plan continues open loop; the bearing correction is paused while the tag is
+not visible.
 """
 import math
 from dataclasses import dataclass
@@ -26,7 +29,8 @@ SEARCHING, ALIGNING, CHASING, ARRIVED = 'SEARCHING', 'ALIGNING', 'CHASING', 'ARR
 
 @dataclass
 class MissionParams:
-    lost_timeout: float = 0.45      # s, tag considered hidden after this
+    lost_timeout: float = 0.45      # s, tag considered hidden after this (SEARCHING / ALIGNING)
+    chase_lost_timeout: float = 1.5  # s, dropouts tolerated while CHASING (~4 detections/s at 1.5 m)
     search_rate: float = 0.30       # rad/s
     align_tol: float = 0.18         # rad
     align_gain: float = 1.0         # rad/s per rad
@@ -92,8 +96,9 @@ class Mission:
             t = now - self.chase_t0
             _, _, v_ref, w_ref = self.traj.sample(t)
             remaining = self.traj.x_goal - self._progress(t, odom_xy)
-            if not visible and remaining > p.blind_zone:
-                self.state = SEARCHING          # lost the tag while still far: search again
+            lost_long = self.last_tag_time is None or now - self.last_tag_time > p.chase_lost_timeout
+            if lost_long and remaining > p.blind_zone:
+                self.state = SEARCHING          # really lost while still far: search again
                 self.centered_count = 0
                 return 0.0, 0.0
             w = w_ref + (clamp(p.chase_gain * self.bearing, p.max_rate) if visible else 0.0)
