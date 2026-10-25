@@ -6,9 +6,9 @@ tag_detector:
     quad_decimate: 1.0
     init_arm: false            # arm is set by hand 2 cm above the ToF sensor (the A2 pose hits it)
     extrinsics: tag            # camera pose from the floor tag, not the (wrong) arm TF
-    camera_pitch_deg: 6.3      # from the floor tag at arm x 0.141, z 0.060
+    camera_pitch_deg: 5.3      # from the floor tag at 0.6-1.0 m, arm set by hand (router-mode session)
     range_scale: 1.0           # chassis-front distance = scale * camera forward + offset
-    range_offset: -0.149       # updated after the range calibration fit
+    range_offset: -0.162       # median of (tape - camera forward), data/calibration/tag_range.csv rows 5-8
 flatness_planner:
   ros__parameters:
     control_rate: 20.0
