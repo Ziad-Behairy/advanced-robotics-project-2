@@ -23,7 +23,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            # Nodes are added in later steps (tag detector, planner).
+            'tag_detector = rm_flatness_nav.tag_detector:main',
         ],
     },
 )
