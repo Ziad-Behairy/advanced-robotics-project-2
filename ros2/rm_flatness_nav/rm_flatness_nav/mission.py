@@ -30,7 +30,7 @@ SEARCHING, ALIGNING, CHASING, ARRIVED = 'SEARCHING', 'ALIGNING', 'CHASING', 'ARR
 @dataclass
 class MissionParams:
     lost_timeout: float = 0.45      # s, tag considered hidden after this (SEARCHING / ALIGNING)
-    chase_lost_timeout: float = 1.5  # s, dropouts tolerated while CHASING (~4 detections/s at 1.5 m)
+    chase_lost_timeout: float = 2.0  # s, dropouts tolerated while CHASING (start jolt at 1.5 m: 1.6 s gap)
     search_rate: float = 0.30       # rad/s
     align_tol: float = 0.18         # rad
     align_gain: float = 1.0         # rad/s per rad

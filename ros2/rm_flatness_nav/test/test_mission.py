@@ -94,5 +94,5 @@ def test_short_dropout_while_chasing_keeps_plan():
     t0 = m.chase_t0
     v, _ = m.step(t0 + 1.0, (0.05, 0.0))   # 1 s without the tag: still chasing on the plan
     assert m.state == CHASING and v > 0
-    m.step(t0 + 2.0, (0.10, 0.0))          # > 1.5 s without the tag, far from goal: search
+    m.step(t0 + 2.5, (0.10, 0.0))          # > 2.0 s without the tag, far from goal: search
     assert m.state == SEARCHING
