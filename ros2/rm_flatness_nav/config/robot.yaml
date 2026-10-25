@@ -8,7 +8,7 @@ tag_detector:
     extrinsics: tag            # camera pose from the floor tag, not the (wrong) arm TF
     camera_pitch_deg: 5.3      # from the floor tag at 0.6-1.0 m, arm set by hand (router-mode session)
     range_scale: 1.0           # chassis-front distance = scale * camera forward + offset
-    range_offset: -0.162       # median of (tape - camera forward), data/calibration/tag_range.csv rows 5-8
+    range_offset: -0.162       # median of (tape - camera forward), data/calibration/tag_range.csv rows 3-6 (final arm pose, 01:00-01:07)
 flatness_planner:
   ros__parameters:
     control_rate: 20.0
