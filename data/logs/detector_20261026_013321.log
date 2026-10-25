@@ -207,3 +207,34 @@
 [INFO] [1792968633.316391330] [tag_detector]: 14.4 frames/s processed, T3 seen in 0
 [INFO] [1792968638.327382486] [tag_detector]: 14.8 frames/s processed, T3 seen in 0
 [INFO] [1792968643.261604851] [tag_detector]: 10.4 frames/s processed, T3 seen in 0
+[INFO] [1792968648.316957837] [tag_detector]: 14.2 frames/s processed, T3 seen in 0
+[INFO] [1792968653.305128666] [tag_detector]: 14.8 frames/s processed, T3 seen in 0
+Traceback (most recent call last):
+  File "/home/elzoz/ros2_ws/install/rm_flatness_nav/lib/rm_flatness_nav/tag_detector", line 33, in <module>
+    sys.exit(load_entry_point('rm-flatness-nav', 'console_scripts', 'tag_detector')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/elzoz/ros2_ws/build/rm_flatness_nav/rm_flatness_nav/tag_detector.py", line 234, in main
+    rclpy.spin(node)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 247, in spin
+    executor.spin_once()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 926, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 918, in _spin_once_impl
+    raise handler.exception()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/task.py", line 286, in _execute_coroutine_step
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 592, in handler
+    await call_coroutine()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 454, in _execute
+    await await_or_execute(tmr.callback)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 115, in await_or_execute
+    return callback(*args)
+           ^^^^^^^^^^^^^^^
+  File "/home/elzoz/ros2_ws/build/rm_flatness_nav/rm_flatness_nav/tag_detector.py", line 166, in process
+    want_pub = self.debug_pub.get_subscription_count() > 0
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/publisher.py", line 79, in get_subscription_count
+    return self.__publisher.get_subscription_count()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rclpy._rclpy_pybind11.RCLError: failed to get subscription count: publisher's context is invalid, at ./src/rcl/publisher.c:423

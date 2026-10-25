@@ -21,3 +21,154 @@
 [robomaster_driver-1] [INFO] [1792967428.432405141] [robomaster]: [Camera] Started video stream with resolution 720p
 [robomaster_driver-1] [INFO] [1792967598.518190263] [robomaster]: [Camera] Stopped video stream
 [robomaster_driver-1] [INFO] [1792967603.430063180] [robomaster]: [Camera] Started video stream with resolution 720p
+[robomaster_driver-1] [INFO] [1792968655.562306341] [robomaster]: [Camera] Stopped video stream
+[robomaster_driver-1] [INFO] [1792968660.234131048] [robomaster]: [Camera] Started video stream with resolution 720p
+[robomaster_driver-1] 2026-10-26 01:58:54,089 ERROR client.py:163 Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] 2026-10-26 01:58:57,090 ERROR client.py:163 Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] [INFO] [1792969137.656001604] [robomaster]: [Camera] Stopped video stream
+[robomaster_driver-1] 2026-10-26 01:59:00,659 ERROR client.py:163 Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] 2026-10-26 01:59:00,659 ERROR camera.py:285 Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] ERROR:sdk:Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] [INFO] [1792969140.659906155] [robomaster]: [Camera] Failed starting video stream
+[robomaster_driver-1] 2026-10-26 01:59:03,865 ERROR client.py:163 Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] 2026-10-26 01:59:03,866 ERROR camera.py:285 Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] ERROR:sdk:Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] [INFO] [1792969143.867380955] [robomaster]: [Camera] Failed starting video stream
+[robomaster_driver-1] 2026-10-26 01:59:09,515 ERROR client.py:163 Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] 2026-10-26 01:59:09,515 ERROR camera.py:285 Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] ERROR:sdk:Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] [INFO] [1792969149.516950045] [robomaster]: [Camera] Failed starting video stream
+[robomaster_driver-1] 2026-10-26 01:59:13,515 ERROR client.py:163 Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] 2026-10-26 01:59:13,516 ERROR camera.py:285 Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] ERROR:sdk:Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] [INFO] [1792969153.517154638] [robomaster]: [Camera] Failed starting video stream
+[robomaster_driver-1] 2026-10-26 01:59:16,624 ERROR client.py:163 Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] 2026-10-26 01:59:16,624 ERROR camera.py:285 Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] ERROR:sdk:Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] [INFO] [1792969156.625826723] [robomaster]: [Camera] Failed starting video stream
+[robomaster_driver-1] 2026-10-26 01:59:19,980 ERROR client.py:163 Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] 2026-10-26 01:59:19,981 ERROR camera.py:285 Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] ERROR:sdk:Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] [INFO] [1792969159.982310290] [robomaster]: [Camera] Failed starting video stream
+[robomaster_driver-1] 2026-10-26 01:59:22,985 ERROR client.py:163 Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] 2026-10-26 01:59:22,985 ERROR camera.py:285 Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] ERROR:sdk:Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] [INFO] [1792969162.986514767] [robomaster]: [Camera] Failed starting video stream
+[robomaster_driver-1] 2026-10-26 01:59:26,211 ERROR client.py:163 Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] 2026-10-26 01:59:26,211 ERROR camera.py:285 Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] ERROR:sdk:Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] [INFO] [1792969166.212536053] [robomaster]: [Camera] Failed starting video stream
+[robomaster_driver-1] 2026-10-26 01:59:29,246 ERROR client.py:163 Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] 2026-10-26 01:59:29,246 ERROR camera.py:285 Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] ERROR:sdk:Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] [INFO] [1792969169.247701195] [robomaster]: [Camera] Failed starting video stream
+[robomaster_driver-1] 2026-10-26 01:59:32,365 ERROR client.py:163 Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] 2026-10-26 01:59:32,365 ERROR camera.py:285 Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] ERROR:sdk:Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] [INFO] [1792969172.366508489] [robomaster]: [Camera] Failed starting video stream
+[robomaster_driver-1] 2026-10-26 01:59:35,382 ERROR client.py:163 Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] 2026-10-26 01:59:35,382 ERROR camera.py:285 Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] ERROR:sdk:Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] [INFO] [1792969175.383615743] [robomaster]: [Camera] Failed starting video stream
+[robomaster_driver-1] 2026-10-26 01:59:38,388 ERROR client.py:163 Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] 2026-10-26 01:59:38,388 ERROR camera.py:285 Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] ERROR:sdk:Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] [INFO] [1792969178.389594960] [robomaster]: [Camera] Failed starting video stream
+[robomaster_driver-1] 2026-10-26 01:59:41,507 ERROR client.py:163 Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] 2026-10-26 01:59:41,508 ERROR camera.py:285 Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] ERROR:sdk:Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] [INFO] [1792969181.509252670] [robomaster]: [Camera] Failed starting video stream
+[robomaster_driver-1] 2026-10-26 01:59:44,652 ERROR client.py:163 Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] 2026-10-26 01:59:44,653 ERROR camera.py:285 Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] ERROR:sdk:Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] [INFO] [1792969184.654282186] [robomaster]: [Camera] Failed starting video stream
+[robomaster_driver-1] 2026-10-26 01:59:47,715 ERROR client.py:163 Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] 2026-10-26 01:59:47,716 ERROR camera.py:285 Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] ERROR:sdk:Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] [INFO] [1792969187.717258978] [robomaster]: [Camera] Failed starting video stream
+[robomaster_driver-1] 2026-10-26 01:59:50,742 ERROR client.py:163 Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] 2026-10-26 01:59:50,742 ERROR camera.py:285 Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] ERROR:sdk:Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] [INFO] [1792969190.743443276] [robomaster]: [Camera] Failed starting video stream
+[robomaster_driver-1] 2026-10-26 01:59:53,756 ERROR client.py:163 Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] 2026-10-26 01:59:53,756 ERROR camera.py:285 Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] ERROR:sdk:Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] [INFO] [1792969193.757745387] [robomaster]: [Camera] Failed starting video stream
+[robomaster_driver-1] 2026-10-26 01:59:57,043 ERROR client.py:163 Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] 2026-10-26 01:59:57,043 ERROR camera.py:285 Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] ERROR:sdk:Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] [INFO] [1792969197.044583636] [robomaster]: [Camera] Failed starting video stream
+[robomaster_driver-1] 2026-10-26 02:00:00,058 ERROR client.py:163 Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] 2026-10-26 02:00:00,059 ERROR camera.py:285 Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] ERROR:sdk:Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] [INFO] [1792969200.060220393] [robomaster]: [Camera] Failed starting video stream
+[robomaster_driver-1] [WARN] [1792969200.155438403] [robomaster]: Disconnected
+[robomaster_driver-1] [INFO] [1792969200.155824279] [robomaster]: Will abort any action
+[robomaster_driver-1] [INFO] [1792969200.157438810] [robomaster]: Will stop client
+[robomaster_driver-1] 2026-10-26 02:00:00,678 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [INFO] [1792969200.683415825] [robomaster]: Has stopped client
+[robomaster_driver-1] [INFO] [1792969200.818466663] [robomaster]: Waiting for a robot
+[robomaster_driver-1] 2026-10-26 02:00:03,821 ERROR conn.py:112 scan_robot_ip: exception timed out
+[robomaster_driver-1] ERROR:sdk:scan_robot_ip: exception timed out
+[robomaster_driver-1] 2026-10-26 02:00:08,420 ERROR conn.py:112 scan_robot_ip: exception timed out
+[robomaster_driver-1] ERROR:sdk:scan_robot_ip: exception timed out
+[robomaster_driver-1] 2026-10-26 02:00:12,649 ERROR conn.py:112 scan_robot_ip: exception timed out
+[robomaster_driver-1] ERROR:sdk:scan_robot_ip: exception timed out
+[robomaster_driver-1] 2026-10-26 02:00:17,188 ERROR conn.py:112 scan_robot_ip: exception timed out
+[robomaster_driver-1] ERROR:sdk:scan_robot_ip: exception timed out
+[robomaster_driver-1] 2026-10-26 02:00:21,361 ERROR conn.py:112 scan_robot_ip: exception timed out
+[robomaster_driver-1] ERROR:sdk:scan_robot_ip: exception timed out
+[robomaster_driver-1] 2026-10-26 02:00:25,919 ERROR conn.py:112 scan_robot_ip: exception timed out
+[robomaster_driver-1] ERROR:sdk:scan_robot_ip: exception timed out
+[robomaster_driver-1] 2026-10-26 02:00:29,974 ERROR conn.py:112 scan_robot_ip: exception timed out
+[robomaster_driver-1] ERROR:sdk:scan_robot_ip: exception timed out
+[robomaster_driver-1] 2026-10-26 02:00:34,615 ERROR conn.py:112 scan_robot_ip: exception timed out
+[robomaster_driver-1] ERROR:sdk:scan_robot_ip: exception timed out
+[robomaster_driver-1] 2026-10-26 02:00:39,246 ERROR conn.py:112 scan_robot_ip: exception timed out
+[robomaster_driver-1] ERROR:sdk:scan_robot_ip: exception timed out
+[robomaster_driver-1] 2026-10-26 02:00:44,044 ERROR conn.py:112 scan_robot_ip: exception timed out
+[robomaster_driver-1] ERROR:sdk:scan_robot_ip: exception timed out
+[robomaster_driver-1] 2026-10-26 02:00:48,652 ERROR conn.py:112 scan_robot_ip: exception timed out
+[robomaster_driver-1] ERROR:sdk:scan_robot_ip: exception timed out
+[robomaster_driver-1] 2026-10-26 02:00:52,837 ERROR conn.py:112 scan_robot_ip: exception timed out
+[robomaster_driver-1] ERROR:sdk:scan_robot_ip: exception timed out
+[robomaster_driver-1] 2026-10-26 02:00:57,223 ERROR conn.py:112 scan_robot_ip: exception timed out
+[robomaster_driver-1] ERROR:sdk:scan_robot_ip: exception timed out
+[robomaster_driver-1] 2026-10-26 02:01:01,326 ERROR conn.py:112 scan_robot_ip: exception timed out
+[robomaster_driver-1] ERROR:sdk:scan_robot_ip: exception timed out
+[robomaster_driver-1] 2026-10-26 02:01:05,807 ERROR conn.py:112 scan_robot_ip: exception timed out
+[robomaster_driver-1] ERROR:sdk:scan_robot_ip: exception timed out
+[robomaster_driver-1] 2026-10-26 02:01:10,294 ERROR conn.py:112 scan_robot_ip: exception timed out
+[robomaster_driver-1] ERROR:sdk:scan_robot_ip: exception timed out
+[robomaster_driver-1] 2026-10-26 02:01:14,998 ERROR conn.py:112 scan_robot_ip: exception timed out
+[robomaster_driver-1] ERROR:sdk:scan_robot_ip: exception timed out
+[robomaster_driver-1] 2026-10-26 02:01:19,841 ERROR conn.py:112 scan_robot_ip: exception timed out
+[robomaster_driver-1] ERROR:sdk:scan_robot_ip: exception timed out
+[robomaster_driver-1] 2026-10-26 02:01:23,951 ERROR conn.py:112 scan_robot_ip: exception timed out
+[robomaster_driver-1] ERROR:sdk:scan_robot_ip: exception timed out
+[robomaster_driver-1] 2026-10-26 02:01:28,267 ERROR conn.py:112 scan_robot_ip: exception timed out
+[robomaster_driver-1] ERROR:sdk:scan_robot_ip: exception timed out
+[robomaster_driver-1] 2026-10-26 02:01:32,844 ERROR conn.py:112 scan_robot_ip: exception timed out
+[robomaster_driver-1] ERROR:sdk:scan_robot_ip: exception timed out

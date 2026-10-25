@@ -1,0 +1,42 @@
+# Verbatim terminal output of the final run (flatness_planner), as printed live on 2026-10-26.
+# Captured from the session that launched the run (lines piped through `cut -c1-170`, "Waiting" warnings filtered).
+[INFO] [1792968601.529078317] [flatness_planner]: Run folder: /home/elzoz/advanced_robotics_project_2/data/runs/20261026_015001
+ t (s)   V1 (V)   V2 (V)   V3 (V)   V4 (V)  state
+[INFO] [1792968601.662962896] [flatness_planner]: Arm pose OK (0.0 mm from saved). Mission starts.
+     0    1.896   -1.896   -1.896    1.896  SEARCHING
+     1    0.456   -0.456   -0.456    0.456  SEARCHING
+     2    0.456   -0.456   -0.456    0.456  SEARCHING
+     3    0.456   -0.456   -0.456    0.456  SEARCHING
+     4    0.456   -0.456   -0.456    0.456  SEARCHING
+     5    0.456   -0.456   -0.456    0.456  SEARCHING
+[INFO] [1792968607.012701301] [flatness_planner]: SEARCHING -> ALIGNING
+     6    0.456   -0.456   -0.456    0.456  ALIGNING
+[INFO] [1792968607.863391762] [flatness_planner]: ALIGNING -> SEARCHING
+[INFO] [1792968607.913365835] [flatness_planner]: SEARCHING -> ALIGNING
+[INFO] [1792968608.363912619] [flatness_planner]: ALIGNING -> SEARCHING
+     7    0.456   -0.456   -0.456    0.456  SEARCHING
+     8    0.456   -0.456   -0.456    0.456  SEARCHING
+[INFO] [1792968610.113242814] [flatness_planner]: SEARCHING -> ALIGNING
+[INFO] [1792968610.212607918] [flatness_planner]: ALIGNING -> CHASING (d0=1.440 m, T=12.4 s)
+     9    0.583    0.583    0.583    0.583  CHASING
+    10    0.750    0.750    0.750    0.750  CHASING
+[INFO] [1792968612.112860866] [flatness_planner]: CHASING -> SEARCHING
+[INFO] [1792968612.262955589] [flatness_planner]: SEARCHING -> ALIGNING
+    11   -0.437    0.437    0.437   -0.437  ALIGNING
+[INFO] [1792968613.213195793] [flatness_planner]: ALIGNING -> CHASING (d0=1.269 m, T=10.7 s)
+    12    0.552    0.652    0.652    0.552  CHASING
+    13    0.847    0.729    0.729    0.847  CHASING
+    14    0.952    0.916    0.916    0.952  CHASING
+    15    1.029    1.005    1.005    1.029  CHASING
+    16    1.063    1.024    1.024    1.063  CHASING
+    17    0.997    1.031    1.031    0.997  CHASING
+    18    0.931    0.926    0.926    0.931  CHASING
+    19    0.807    0.784    0.784    0.807  CHASING
+    20    0.544    0.636    0.636    0.544  CHASING
+    21    0.337    0.337    0.337    0.337  CHASING
+    22    0.028    0.028    0.028    0.028  CHASING
+[INFO] [1792968623.912733245] [flatness_planner]: CHASING -> ARRIVED (plan finished (T=10.7 s))
+    23    0.000    0.000    0.000    0.000  ARRIVED
+    24    0.000    0.000    0.000    0.000  ARRIVED
+    25    0.000    0.000    0.000    0.000  ARRIVED
+[INFO] [1792968626.913815819] [flatness_planner]: Mission complete. Logs in /home/elzoz/advanced_robotics_project_2/data/runs/20261026_015001
