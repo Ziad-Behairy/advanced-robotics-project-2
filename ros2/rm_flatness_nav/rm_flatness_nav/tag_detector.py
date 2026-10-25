@@ -11,6 +11,8 @@ builds a backlog of old frames. This plays the role of the assignment's grab-thr
 driver owns the H.264 decoder, and this node never holds on to its frame buffers.
 """
 
+import os
+
 import cv2
 import numpy as np
 import rclpy
@@ -45,6 +47,11 @@ class TagDetector(Node):
         # distance from the chassis front = range_scale * camera floor-forward distance + range_offset
         self.range_scale = self.declare_parameter('range_scale', 1.0).value
         self.range_offset = self.declare_parameter('range_offset', -0.149).value
+        # Optional: save every processed frame (color, annotated, 640x360 JPEG named by its ROS stamp in ns)
+        # for the replay video. Empty = off.
+        self.save_dir = os.path.expanduser(self.declare_parameter('save_frames_dir', '').value)
+        if self.save_dir:
+            os.makedirs(self.save_dir, exist_ok=True)
         self.init_arm = self.declare_parameter('init_arm', False).value
         self.arm_x = self.declare_parameter('arm_x', 0.105).value  # m, SDK X
         self.arm_z = self.declare_parameter('arm_z', 0.030).value  # m, SDK Y (up)
@@ -156,8 +163,17 @@ class TagDetector(Node):
                                           camera_params=self.camera_params, tag_size=self.tag_size)
         target = next((d for d in detections if d.tag_id == self.target_id), None)
 
-        if self.debug_pub.get_subscription_count() > 0:
-            self.publish_debug(msg, gray, detections)
+        want_pub = self.debug_pub.get_subscription_count() > 0
+        if want_pub or self.save_dir:
+            img = self.render_debug(msg, detections)
+            if want_pub:
+                out = self.bridge.cv2_to_imgmsg(img, 'bgr8')
+                out.header = msg.header
+                self.debug_pub.publish(out)
+            if self.save_dir:
+                stamp_ns = msg.header.stamp.sec * 1_000_000_000 + msg.header.stamp.nanosec
+                small = cv2.resize(img, (640, 360), interpolation=cv2.INTER_AREA)
+                cv2.imwrite(os.path.join(self.save_dir, f'{stamp_ns}.jpg'), small, [cv2.IMWRITE_JPEG_QUALITY, 85])
         if target is None:
             return
         self.floor_est = camera_from_floor_tag(target.pose_R, target.pose_t)
@@ -189,8 +205,8 @@ class TagDetector(Node):
         stamp = msg.header.stamp.sec + 1e-9 * msg.header.stamp.nanosec
         self.rb_pub.publish(Float32MultiArray(data=[d, bearing, float(target.decision_margin), stamp]))
 
-    def publish_debug(self, msg, gray, detections):
-        img = cv2.cvtColor(gray, cv2.COLOR_GRAY2BGR)
+    def render_debug(self, msg, detections):
+        img = self.bridge.imgmsg_to_cv2(msg, 'bgr8').copy()
         for det in detections:
             color = (0, 200, 0) if det.tag_id == self.target_id else (0, 160, 255)
             cv2.polylines(img, [det.corners.astype(np.int32)], True, color, 2)
@@ -198,9 +214,7 @@ class TagDetector(Node):
             cv2.putText(img, f'T{det.tag_id}', (cx - 15, cy + 8), cv2.FONT_HERSHEY_SIMPLEX, 0.8, color, 2)
         h, w = img.shape[:2]
         cv2.line(img, (w // 2, 0), (w // 2, h), (255, 255, 255), 1)
-        out = self.bridge.cv2_to_imgmsg(img, 'bgr8')
-        out.header = msg.header
-        self.debug_pub.publish(out)
+        return img
 
     def report(self):
         msg = f'{self.n_frames / 5.0:.1f} frames/s processed, T{self.target_id} seen in {self.n_hits}'

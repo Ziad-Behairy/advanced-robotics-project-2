@@ -13,6 +13,7 @@
   motor_voltage_log.csv; every tick is written to motor_voltage_full.csv (for the v(t), V1(t) plot).
 """
 import csv
+import math
 import os
 import time
 
@@ -49,6 +50,7 @@ class Planner(Node):
         self.volts = VoltageModel()
         self.dt = 1.0 / self.rate
         self.odom_xy = None
+        self.odom_yaw = None
 
         run = time.strftime('%Y%m%d_%H%M%S')
         self.run_dir = os.path.join(out_dir, run)
@@ -58,8 +60,9 @@ class Planner(Node):
         self.log = csv.writer(self.log_file)
         self.full = csv.writer(self.full_file)
         header = ['t_s', 'V1', 'V2', 'V3', 'V4', 'state', 'v_cmd', 'w_cmd', 'w1', 'w2', 'w3', 'w4',
-                  'tag_d', 'tag_bearing', 'tof']
-        self.log.writerow(header)
+                  'tag_d', 'tag_bearing', 'tof', 'ros_time', 'odom_x', 'odom_y', 'odom_yaw']
+        self.n_log_cols = 15                      # deliverable CSV: no replay-only columns
+        self.log.writerow(header[:self.n_log_cols])
         self.full.writerow(header)
 
         self.cmd_pub = self.create_publisher(Twist, 'cmd_vel', 10)
@@ -89,6 +92,8 @@ class Planner(Node):
 
     def on_odom(self, msg):
         self.odom_xy = (msg.pose.pose.position.x, msg.pose.pose.position.y)
+        q = msg.pose.pose.orientation
+        self.odom_yaw = math.atan2(2 * (q.w * q.z + q.x * q.y), 1 - 2 * (q.y * q.y + q.z * q.z))
 
     def on_arm(self, msg):
         self.arm_pos = (msg.point.x, msg.point.z)
@@ -134,10 +139,12 @@ class Planner(Node):
         row = [f'{t:.3f}', *(f'{x:.3f}' for x in volts), m.state, f'{v:.4f}', f'{w:.4f}',
                *(f'{x:.3f}' for x in wheels),
                '' if m.distance is None else f'{m.distance:.3f}', f'{m.bearing:.3f}',
-               '' if m.tof is None else f'{m.tof:.3f}']
+               '' if m.tof is None else f'{m.tof:.3f}', f'{now:.3f}',
+               *(('', '') if self.odom_xy is None else (f'{self.odom_xy[0]:.4f}', f'{self.odom_xy[1]:.4f}')),
+               '' if self.odom_yaw is None else f'{self.odom_yaw:.4f}']
         self.full.writerow(row)
         if t + 1e-6 >= self.next_log:
-            self.log.writerow([f'{round(t):d}', *row[1:]])
+            self.log.writerow([f'{round(t):d}', *row[1:self.n_log_cols]])
             self.log_file.flush()
             print(f'{round(t):>6d} {volts[0]:>8.3f} {volts[1]:>8.3f} {volts[2]:>8.3f} {volts[3]:>8.3f}  {m.state}',
                   flush=True)
