@@ -1,0 +1,93 @@
+[INFO] [1792963434.547173139] [tag_detector]: Camera intrinsics 1280x720: fx=628.6 fy=625.8 cx=638.0 cy=361.6
+[INFO] [1792963439.312090390] [tag_detector]: 14.0 frames/s processed, T3 seen in 70 | camera from tag: height 0.312 m, pitch +6.3 deg down, roll -0.0 deg
+[INFO] [1792963444.319807605] [tag_detector]: 14.6 frames/s processed, T3 seen in 73 | camera from tag: height 0.313 m, pitch +6.3 deg down, roll -0.1 deg
+[INFO] [1792963449.312442912] [tag_detector]: 11.4 frames/s processed, T3 seen in 57 | camera from tag: height 0.313 m, pitch +6.3 deg down, roll -0.0 deg
+[INFO] [1792963454.328701157] [tag_detector]: 14.8 frames/s processed, T3 seen in 74 | camera from tag: height 0.313 m, pitch +6.3 deg down, roll -0.1 deg
+[INFO] [1792963459.317030428] [tag_detector]: 13.4 frames/s processed, T3 seen in 67 | camera from tag: height 0.313 m, pitch +6.3 deg down, roll -0.1 deg
+[INFO] [1792963464.310982173] [tag_detector]: 11.2 frames/s processed, T3 seen in 56 | camera from tag: height 0.313 m, pitch +6.3 deg down, roll -0.1 deg
+[INFO] [1792963469.317452823] [tag_detector]: 14.6 frames/s processed, T3 seen in 73 | camera from tag: height 0.314 m, pitch +6.4 deg down, roll -0.0 deg
+[INFO] [1792963474.315909881] [tag_detector]: 14.8 frames/s processed, T3 seen in 74 | camera from tag: height 0.313 m, pitch +6.3 deg down, roll -0.2 deg
+[INFO] [1792963479.275042694] [tag_detector]: 6.6 frames/s processed, T3 seen in 33 | camera from tag: height 0.313 m, pitch +6.3 deg down, roll -0.1 deg
+[INFO] [1792963484.275546434] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963489.275463251] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963494.275134600] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963499.274592939] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963504.275481858] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963509.275038231] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963514.274658787] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963519.274942785] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963524.275015663] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963529.274989805] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963534.274653109] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963539.274960333] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963544.275084129] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963549.274620394] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963554.275022984] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963559.274584252] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963564.274514301] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963569.275038382] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963574.274559828] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963579.275022720] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963584.274493120] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963589.275372160] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963594.275342604] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963599.275303475] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963604.275262046] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963609.275371070] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963614.274545407] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963619.274783195] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963624.275121800] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963629.275695325] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963634.274427915] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963639.274963199] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963644.274477514] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963649.274958589] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963654.275114971] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963659.275062326] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963664.274802058] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963669.310920576] [tag_detector]: 1.6 frames/s processed, T3 seen in 8 | camera from tag: height 0.314 m, pitch +6.6 deg down, roll +0.1 deg
+[INFO] [1792963674.308842987] [tag_detector]: 10.8 frames/s processed, T3 seen in 54 | camera from tag: height 0.313 m, pitch +6.6 deg down, roll +0.2 deg
+[INFO] [1792963679.309847379] [tag_detector]: 15.0 frames/s processed, T3 seen in 75 | camera from tag: height 0.313 m, pitch +6.5 deg down, roll +0.2 deg
+[INFO] [1792963684.310692504] [tag_detector]: 14.8 frames/s processed, T3 seen in 74 | camera from tag: height 0.312 m, pitch +6.5 deg down, roll +0.3 deg
+[INFO] [1792963689.308634815] [tag_detector]: 11.0 frames/s processed, T3 seen in 55 | camera from tag: height 0.315 m, pitch +6.7 deg down, roll +0.2 deg
+[INFO] [1792963694.311302380] [tag_detector]: 15.0 frames/s processed, T3 seen in 75 | camera from tag: height 0.315 m, pitch +6.7 deg down, roll +0.1 deg
+[INFO] [1792963699.311604233] [tag_detector]: 15.0 frames/s processed, T3 seen in 75 | camera from tag: height 0.310 m, pitch +6.4 deg down, roll +0.2 deg
+[INFO] [1792963704.311364666] [tag_detector]: 10.8 frames/s processed, T3 seen in 54 | camera from tag: height 0.312 m, pitch +6.5 deg down, roll +0.3 deg
+[INFO] [1792963709.303887886] [tag_detector]: 15.0 frames/s processed, T3 seen in 75 | camera from tag: height 0.310 m, pitch +6.4 deg down, roll +0.2 deg
+[INFO] [1792963714.310649909] [tag_detector]: 15.0 frames/s processed, T3 seen in 75 | camera from tag: height 0.311 m, pitch +6.5 deg down, roll +0.2 deg
+[INFO] [1792963719.328917170] [tag_detector]: 10.0 frames/s processed, T3 seen in 50 | camera from tag: height 0.312 m, pitch +6.5 deg down, roll +0.2 deg
+[INFO] [1792963724.310161583] [tag_detector]: 14.6 frames/s processed, T3 seen in 73 | camera from tag: height 0.310 m, pitch +6.4 deg down, roll +0.2 deg
+[INFO] [1792963729.274700971] [tag_detector]: 10.2 frames/s processed, T3 seen in 51 | camera from tag: height 0.314 m, pitch +6.6 deg down, roll +0.1 deg
+[INFO] [1792963734.275458536] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963739.275208944] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963744.275440195] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963749.275589853] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963754.310737470] [tag_detector]: 11.2 frames/s processed, T3 seen in 56 | camera from tag: height 0.311 m, pitch +6.5 deg down, roll +0.2 deg
+[INFO] [1792963759.309114157] [tag_detector]: 15.0 frames/s processed, T3 seen in 75 | camera from tag: height 0.311 m, pitch +6.4 deg down, roll +0.2 deg
+[INFO] [1792963764.312370873] [tag_detector]: 11.0 frames/s processed, T3 seen in 55 | camera from tag: height 0.311 m, pitch +6.5 deg down, roll +0.2 deg
+[INFO] [1792963769.313264266] [tag_detector]: 15.0 frames/s processed, T3 seen in 75 | camera from tag: height 0.312 m, pitch +6.5 deg down, roll +0.2 deg
+[INFO] [1792963774.307017822] [tag_detector]: 15.0 frames/s processed, T3 seen in 75 | camera from tag: height 0.313 m, pitch +6.5 deg down, roll +0.2 deg
+[INFO] [1792963779.313511274] [tag_detector]: 10.8 frames/s processed, T3 seen in 54 | camera from tag: height 0.310 m, pitch +6.4 deg down, roll +0.2 deg
+[INFO] [1792963784.310552488] [tag_detector]: 15.0 frames/s processed, T3 seen in 75 | camera from tag: height 0.309 m, pitch +6.4 deg down, roll +0.4 deg
+[INFO] [1792963789.310328198] [tag_detector]: 15.0 frames/s processed, T3 seen in 27 | camera from tag: height 0.340 m, pitch +7.3 deg down, roll +1.0 deg
+[INFO] [1792963794.310054561] [tag_detector]: 10.8 frames/s processed, T3 seen in 0
+[INFO] [1792963799.310848081] [tag_detector]: 14.6 frames/s processed, T3 seen in 0
+[INFO] [1792963804.313975146] [tag_detector]: 15.0 frames/s processed, T3 seen in 75 | camera from tag: height 0.311 m, pitch +6.4 deg down, roll +0.3 deg
+[INFO] [1792963809.313206452] [tag_detector]: 10.8 frames/s processed, T3 seen in 54 | camera from tag: height 0.314 m, pitch +6.6 deg down, roll +0.1 deg
+[INFO] [1792963814.275836374] [tag_detector]: 1.0 frames/s processed, T3 seen in 5 | camera from tag: height 0.314 m, pitch +6.6 deg down, roll +0.3 deg
+[INFO] [1792963819.275092795] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963824.274885178] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963829.274774499] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963834.276214670] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963839.275018928] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963844.274795821] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963849.274613377] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963854.275852594] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963859.275209585] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963864.275053965] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963869.275188224] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963874.275015354] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963879.275040740] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963884.310931282] [tag_detector]: 3.4 frames/s processed, T3 seen in 17 | camera from tag: height 0.313 m, pitch +6.6 deg down, roll +0.2 deg
+[INFO] [1792963889.320816531] [tag_detector]: 14.6 frames/s processed, T3 seen in 73 | camera from tag: height 0.313 m, pitch +6.6 deg down, roll +0.1 deg
+[INFO] [1792963894.275876099] [tag_detector]: 14.6 frames/s processed, T3 seen in 73 | camera from tag: height 0.313 m, pitch +6.5 deg down, roll +0.1 deg

@@ -1,0 +1,610 @@
+[INFO] [launch]: All log files can be found below /home/elzoz/.ros/log/2026-10-25-23-54-55-036390-Elzoz-IdeaPad-Gaming-3-192261
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [robomaster_driver-1]: process started with pid [192265]
+[INFO] [robot_state_publisher-2]: process started with pid [192266]
+[INFO] [joint_state_publisher-3]: process started with pid [192267]
+[robomaster_driver-1] [INFO] [1792961704.148340130] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] [INFO] [1792961704.638400523] [robomaster]: Connected
+[robomaster_driver-1] [INFO] [1792961704.684705272] [robomaster]: [Arm] left servo: index 0, direction 1, value 1024, angle 0.073304
+[robomaster_driver-1] [INFO] [1792961704.685825702] [robomaster]: [Arm] right servo: index 1, direction -1, value 1024, angle -0.274016
+[robomaster_driver-1] [WARN] [1792961708.694056084] [robomaster]: [Camera] FFmpeg not available: install PyAV and ffmpeg_image_transport_msgs
+[robomaster_driver-1] [INFO] [1792961708.702599627] [robomaster]: [Chassis] Topic cmd_vel will control chassis twist
+[robomaster_driver-1] [INFO] [1792961709.663929643] [robomaster]: Enabled modules: Arm, Battery, Camera, Chassis, Gripper, LED, Speaker
+[robomaster_driver-1] [INFO] [1792961718.732287548] [robomaster]: [Camera] Started video stream with resolution 720p
+[robomaster_driver-1] [INFO] [1792961727.568629360] [robomaster]: [Camera] Stopped video stream
+[robomaster_driver-1] [WARN] [1792961729.663583124] [robomaster]: Disconnected
+[robomaster_driver-1] [INFO] [1792961729.664089978] [robomaster]: Will abort any action
+[robomaster_driver-1] [INFO] [1792961729.665438026] [robomaster]: Will stop client
+[robomaster_driver-1] 2026-10-25 23:55:30,196 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [INFO] [1792961730.201438079] [robomaster]: Has stopped client
+[robomaster_driver-1] [INFO] [1792961730.343830949] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] 2026-10-25 23:55:35,349 ERROR conn.py:345 SdkConnection: RECV TimeOut!
+[robomaster_driver-1] ERROR:sdk:SdkConnection: RECV TimeOut!
+[robomaster_driver-1] 2026-10-25 23:55:35,349 ERROR robot.py:1355 Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10373), target ('192.168.2.1', 20020).
+[robomaster_driver-1] ERROR:sdk:Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10373), target ('192.168.2.1', 20020).
+[robomaster_driver-1] 2026-10-25 23:55:35,349 ERROR client.py:70 Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] ERROR:sdk:Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] 2026-10-25 23:55:35,351 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-25 23:55:35,351 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-25 23:55:35,351 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-25 23:55:35,351 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-25 23:55:35,351 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [ERROR] [1792961735.353534301] [robomaster]: Could not connect
+[robomaster_driver-1] [INFO] [1792961735.490108265] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] 2026-10-25 23:55:40,495 ERROR conn.py:345 SdkConnection: RECV TimeOut!
+[robomaster_driver-1] ERROR:sdk:SdkConnection: RECV TimeOut!
+[robomaster_driver-1] 2026-10-25 23:55:40,495 ERROR robot.py:1355 Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10284), target ('192.168.2.1', 20020).
+[robomaster_driver-1] ERROR:sdk:Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10284), target ('192.168.2.1', 20020).
+[robomaster_driver-1] 2026-10-25 23:55:40,496 ERROR client.py:70 Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] ERROR:sdk:Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] 2026-10-25 23:55:40,498 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-25 23:55:40,498 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-25 23:55:40,498 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-25 23:55:40,498 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-25 23:55:40,498 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [ERROR] [1792961740.500540115] [robomaster]: Could not connect
+[robomaster_driver-1] [INFO] [1792961740.639004842] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] [INFO] [1792961740.919714641] [robomaster]: Connected
+[robomaster_driver-1] [INFO] [1792961741.080189750] [robomaster]: [Arm] left servo: index 0, direction 1, value 1024, angle 0.073304
+[robomaster_driver-1] [INFO] [1792961741.081232862] [robomaster]: [Arm] right servo: index 1, direction -1, value 1024, angle -0.274016
+[robomaster_driver-1] [WARN] [1792961741.336351946] [robomaster]: [Camera] FFmpeg not available: install PyAV and ffmpeg_image_transport_msgs
+[robomaster_driver-1] [INFO] [1792961741.343799141] [robomaster]: [Chassis] Topic cmd_vel will control chassis twist
+[robomaster_driver-1] [INFO] [1792961741.913826700] [robomaster]: Enabled modules: Arm, Battery, Camera, Chassis, Gripper, LED, Speaker
+[robomaster_driver-1] [INFO] [1792961825.380245226] [robomaster]: [Camera] Started video stream with resolution 720p
+[robomaster_driver-1] [INFO] [1792961829.382459082] [robomaster]: [Camera] Stopped video stream
+[robomaster_driver-1] [WARN] [1792961868.772048988] [robomaster]: Disconnected
+[robomaster_driver-1] [INFO] [1792961868.772451144] [robomaster]: Will abort any action
+[robomaster_driver-1] [INFO] [1792961868.774051526] [robomaster]: Will stop client
+[robomaster_driver-1] 2026-10-25 23:57:49,304 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [INFO] [1792961869.309419384] [robomaster]: Has stopped client
+[robomaster_driver-1] [INFO] [1792961869.445981137] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] 2026-10-25 23:57:54,451 ERROR conn.py:345 SdkConnection: RECV TimeOut!
+[robomaster_driver-1] ERROR:sdk:SdkConnection: RECV TimeOut!
+[robomaster_driver-1] 2026-10-25 23:57:54,451 ERROR robot.py:1355 Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10322), target ('192.168.2.1', 20020).
+[robomaster_driver-1] ERROR:sdk:Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10322), target ('192.168.2.1', 20020).
+[robomaster_driver-1] 2026-10-25 23:57:54,452 ERROR client.py:70 Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] ERROR:sdk:Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] 2026-10-25 23:57:54,453 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-25 23:57:54,453 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-25 23:57:54,453 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-25 23:57:54,453 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-25 23:57:54,454 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [ERROR] [1792961874.455616257] [robomaster]: Could not connect
+[robomaster_driver-1] [INFO] [1792961874.747450985] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] 2026-10-25 23:57:59,752 ERROR conn.py:345 SdkConnection: RECV TimeOut!
+[robomaster_driver-1] ERROR:sdk:SdkConnection: RECV TimeOut!
+[robomaster_driver-1] 2026-10-25 23:57:59,752 ERROR robot.py:1355 Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10394), target ('192.168.2.1', 20020).
+[robomaster_driver-1] ERROR:sdk:Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10394), target ('192.168.2.1', 20020).
+[robomaster_driver-1] 2026-10-25 23:57:59,752 ERROR client.py:70 Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] ERROR:sdk:Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] 2026-10-25 23:57:59,753 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-25 23:57:59,753 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-25 23:57:59,753 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-25 23:57:59,754 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-25 23:57:59,754 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [ERROR] [1792961879.755785411] [robomaster]: Could not connect
+[robomaster_driver-1] [INFO] [1792961879.877971470] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] [INFO] [1792961880.340057124] [robomaster]: Connected
+[robomaster_driver-1] [INFO] [1792961880.346805630] [robomaster]: [Arm] left servo: index 0, direction 1, value 1024, angle 0.073304
+[robomaster_driver-1] [INFO] [1792961880.347805990] [robomaster]: [Arm] right servo: index 1, direction -1, value 1024, angle -0.274016
+[robomaster_driver-1] [WARN] [1792961880.894546117] [robomaster]: [Camera] FFmpeg not available: install PyAV and ffmpeg_image_transport_msgs
+[robomaster_driver-1] [INFO] [1792961880.898593865] [robomaster]: [Chassis] Topic cmd_vel will control chassis twist
+[robomaster_driver-1] [INFO] [1792961881.395040206] [robomaster]: Enabled modules: Arm, Battery, Camera, Chassis, Gripper, LED, Speaker
+[robomaster_driver-1] [INFO] [1792961881.661143937] [robomaster]: [Camera] Started video stream with resolution 720p
+[robomaster_driver-1] [INFO] [1792961883.663590009] [robomaster]: [Camera] Stopped video stream
+[robomaster_driver-1] [INFO] [1792961892.773868915] [robomaster]: [Camera] Started video stream with resolution 720p
+[robomaster_driver-1] [INFO] [1792961906.787331516] [robomaster]: [Camera] Stopped video stream
+[robomaster_driver-1] [INFO] [1792961942.413746748] [robomaster]: Will abort any action
+[robomaster_driver-1] [WARN] [1792961942.414501050] [robomaster]: Disconnected
+[robomaster_driver-1] [INFO] [1792961942.415708911] [robomaster]: Will stop client
+[robomaster_driver-1] 2026-10-25 23:59:02,947 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [INFO] [1792961942.951637364] [robomaster]: Has stopped client
+[robomaster_driver-1] [INFO] [1792961943.090143138] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] 2026-10-25 23:59:08,094 ERROR conn.py:345 SdkConnection: RECV TimeOut!
+[robomaster_driver-1] ERROR:sdk:SdkConnection: RECV TimeOut!
+[robomaster_driver-1] 2026-10-25 23:59:08,094 ERROR robot.py:1355 Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10188), target ('192.168.2.1', 20020).
+[robomaster_driver-1] ERROR:sdk:Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10188), target ('192.168.2.1', 20020).
+[robomaster_driver-1] 2026-10-25 23:59:08,095 ERROR client.py:70 Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] ERROR:sdk:Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] 2026-10-25 23:59:08,097 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-25 23:59:08,097 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-25 23:59:08,097 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-25 23:59:08,097 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-25 23:59:08,097 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [ERROR] [1792961948.099070975] [robomaster]: Could not connect
+[robomaster_driver-1] [INFO] [1792961948.221987747] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] 2026-10-25 23:59:13,226 ERROR conn.py:345 SdkConnection: RECV TimeOut!
+[robomaster_driver-1] ERROR:sdk:SdkConnection: RECV TimeOut!
+[robomaster_driver-1] 2026-10-25 23:59:13,226 ERROR robot.py:1355 Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10373), target ('192.168.2.1', 20020).
+[robomaster_driver-1] ERROR:sdk:Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10373), target ('192.168.2.1', 20020).
+[robomaster_driver-1] 2026-10-25 23:59:13,226 ERROR client.py:70 Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] ERROR:sdk:Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] 2026-10-25 23:59:13,228 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-25 23:59:13,228 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-25 23:59:13,228 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-25 23:59:13,228 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-25 23:59:13,229 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [ERROR] [1792961953.230755399] [robomaster]: Could not connect
+[robomaster_driver-1] [INFO] [1792961953.357488286] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] 2026-10-25 23:59:18,362 ERROR conn.py:345 SdkConnection: RECV TimeOut!
+[robomaster_driver-1] ERROR:sdk:SdkConnection: RECV TimeOut!
+[robomaster_driver-1] 2026-10-25 23:59:18,363 ERROR robot.py:1355 Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10249), target ('192.168.2.1', 20020).
+[robomaster_driver-1] ERROR:sdk:Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10249), target ('192.168.2.1', 20020).
+[robomaster_driver-1] 2026-10-25 23:59:18,363 ERROR client.py:70 Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] ERROR:sdk:Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] 2026-10-25 23:59:18,364 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-25 23:59:18,365 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-25 23:59:18,365 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-25 23:59:18,365 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-25 23:59:18,365 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [ERROR] [1792961958.367916701] [robomaster]: Could not connect
+[robomaster_driver-1] [INFO] [1792961958.494090125] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] [INFO] [1792961958.709467535] [robomaster]: Connected
+[robomaster_driver-1] [INFO] [1792961958.936868512] [robomaster]: [Arm] left servo: index 0, direction 1, value 1024, angle 0.073304
+[robomaster_driver-1] [INFO] [1792961958.937917271] [robomaster]: [Arm] right servo: index 1, direction -1, value 1024, angle -0.274016
+[robomaster_driver-1] [WARN] [1792961959.001178520] [robomaster]: [Camera] FFmpeg not available: install PyAV and ffmpeg_image_transport_msgs
+[robomaster_driver-1] [INFO] [1792961959.007224177] [robomaster]: [Chassis] Topic cmd_vel will control chassis twist
+[robomaster_driver-1] [INFO] [1792961959.301537213] [robomaster]: Enabled modules: Arm, Battery, Camera, Chassis, Gripper, LED, Speaker
+[robomaster_driver-1] [WARN] [1792962023.775331785] [robomaster]: Disconnected
+[robomaster_driver-1] [INFO] [1792962023.775779546] [robomaster]: Will abort any action
+[robomaster_driver-1] [INFO] [1792962023.777334242] [robomaster]: Will stop client
+[robomaster_driver-1] 2026-10-26 00:00:24,304 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [INFO] [1792962024.308739095] [robomaster]: Has stopped client
+[robomaster_driver-1] [INFO] [1792962024.438451232] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] 2026-10-26 00:00:29,440 ERROR conn.py:345 SdkConnection: RECV TimeOut!
+[robomaster_driver-1] ERROR:sdk:SdkConnection: RECV TimeOut!
+[robomaster_driver-1] 2026-10-26 00:00:29,440 ERROR robot.py:1355 Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10259), target ('192.168.2.1', 20020).
+[robomaster_driver-1] ERROR:sdk:Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10259), target ('192.168.2.1', 20020).
+[robomaster_driver-1] 2026-10-26 00:00:29,440 ERROR client.py:70 Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] ERROR:sdk:Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] 2026-10-26 00:00:29,441 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:00:29,442 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:00:29,442 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:00:29,442 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:00:29,442 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [ERROR] [1792962029.443779022] [robomaster]: Could not connect
+[robomaster_driver-1] [INFO] [1792962029.568112562] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] 2026-10-26 00:00:34,572 ERROR conn.py:345 SdkConnection: RECV TimeOut!
+[robomaster_driver-1] ERROR:sdk:SdkConnection: RECV TimeOut!
+[robomaster_driver-1] 2026-10-26 00:00:34,572 ERROR robot.py:1355 Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10328), target ('192.168.2.1', 20020).
+[robomaster_driver-1] ERROR:sdk:Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10328), target ('192.168.2.1', 20020).
+[robomaster_driver-1] 2026-10-26 00:00:34,572 ERROR client.py:70 Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] ERROR:sdk:Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] 2026-10-26 00:00:34,574 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:00:34,575 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:00:34,575 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:00:34,575 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:00:34,575 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [ERROR] [1792962034.577339487] [robomaster]: Could not connect
+[robomaster_driver-1] [INFO] [1792962034.694780245] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] 2026-10-26 00:00:39,699 ERROR conn.py:345 SdkConnection: RECV TimeOut!
+[robomaster_driver-1] ERROR:sdk:SdkConnection: RECV TimeOut!
+[robomaster_driver-1] 2026-10-26 00:00:39,699 ERROR robot.py:1355 Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10253), target ('192.168.2.1', 20020).
+[robomaster_driver-1] ERROR:sdk:Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10253), target ('192.168.2.1', 20020).
+[robomaster_driver-1] 2026-10-26 00:00:39,700 ERROR client.py:70 Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] ERROR:sdk:Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] 2026-10-26 00:00:39,701 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:00:39,701 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:00:39,702 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:00:39,702 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:00:39,702 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [ERROR] [1792962039.703446096] [robomaster]: Could not connect
+[robomaster_driver-1] [INFO] [1792962039.828705220] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] [INFO] [1792962040.033275729] [robomaster]: Connected
+[robomaster_driver-1] [INFO] [1792962040.039376546] [robomaster]: [Arm] left servo: index 0, direction 1, value 1024, angle 0.073304
+[robomaster_driver-1] [INFO] [1792962040.040408749] [robomaster]: [Arm] right servo: index 1, direction -1, value 1024, angle -0.274016
+[robomaster_driver-1] [WARN] [1792962040.101546822] [robomaster]: [Camera] FFmpeg not available: install PyAV and ffmpeg_image_transport_msgs
+[robomaster_driver-1] [INFO] [1792962040.107252748] [robomaster]: [Chassis] Topic cmd_vel will control chassis twist
+[robomaster_driver-1] [INFO] [1792962040.404818188] [robomaster]: Enabled modules: Arm, Battery, Camera, Chassis, Gripper, LED, Speaker
+[robomaster_driver-1] [INFO] [1792962058.376860373] [robomaster]: [Camera] Started video stream with resolution 720p
+[robomaster_driver-1] [INFO] [1792962059.273949712] [robomaster]: [Arm] Start moving with request robomaster_msgs.action.MoveArm_Goal(x=0.10499999672174454, z=0.029999999329447746, relative=False): action_id:1, state:action_idle, percent:0, x:104, y:29, z:0
+[robomaster_driver-1] [INFO] [1792962061.920256616] [SDK]: Action action_id:1, state:action_succeeded, percent:100, x:115, y:44, z:0 completed
+[robomaster_driver-1] [INFO] [1792962061.921600316] [robomaster]: [Arm] Done moving: succeeded
+[robomaster_driver-1] [INFO] [1792962102.100359736] [robomaster]: Will abort any action
+[robomaster_driver-1] [WARN] [1792962102.101126885] [robomaster]: Disconnected
+[robomaster_driver-1] [INFO] [1792962102.102038329] [robomaster]: Will stop client
+[robomaster_driver-1] 2026-10-26 00:01:43,952 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:01:43,952 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:01:43,952 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [INFO] [1792962103.955768066] [robomaster]: Has stopped client
+[robomaster_driver-1] [INFO] [1792962104.114732141] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] [INFO] [1792962104.373743177] [robomaster]: Connected
+[robomaster_driver-1] [INFO] [1792962104.557359320] [robomaster]: [Arm] left servo: index 0, direction 1, value 1024, angle 0.073304
+[robomaster_driver-1] [INFO] [1792962104.557712304] [robomaster]: [Arm] right servo: index 1, direction -1, value 1024, angle -0.274016
+[robomaster_driver-1] [WARN] [1792962104.622864596] [robomaster]: [Camera] FFmpeg not available: install PyAV and ffmpeg_image_transport_msgs
+[robomaster_driver-1] [INFO] [1792962104.628617167] [robomaster]: [Chassis] Topic cmd_vel will control chassis twist
+[robomaster_driver-1] [INFO] [1792962104.925084834] [robomaster]: Enabled modules: Arm, Battery, Camera, Chassis, Gripper, LED, Speaker
+[robomaster_driver-1] [INFO] [1792962105.080474719] [robomaster]: [Camera] Started video stream with resolution 720p
+[robomaster_driver-1] [INFO] [1792962127.821230891] [robomaster]: [Camera] Stopped video stream
+[robomaster_driver-1] [INFO] [1792962331.570157732] [robomaster]: Will abort any action
+[robomaster_driver-1] [WARN] [1792962331.570711510] [robomaster]: Disconnected
+[robomaster_driver-1] [INFO] [1792962331.571853009] [robomaster]: Will stop client
+[robomaster_driver-1] 2026-10-26 00:05:32,103 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [INFO] [1792962332.107445334] [robomaster]: Has stopped client
+[robomaster_driver-1] [INFO] [1792962332.243212946] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] [INFO] [1792962332.506858600] [robomaster]: Connected
+[robomaster_driver-1] [INFO] [1792962332.513464752] [robomaster]: [Arm] left servo: index 0, direction 1, value 1024, angle 0.073304
+[robomaster_driver-1] [INFO] [1792962332.514550307] [robomaster]: [Arm] right servo: index 1, direction -1, value 1024, angle -0.274016
+[robomaster_driver-1] [WARN] [1792962332.576832046] [robomaster]: [Camera] FFmpeg not available: install PyAV and ffmpeg_image_transport_msgs
+[robomaster_driver-1] [INFO] [1792962332.582810457] [robomaster]: [Chassis] Topic cmd_vel will control chassis twist
+[robomaster_driver-1] [INFO] [1792962332.878869747] [robomaster]: Enabled modules: Arm, Battery, Camera, Chassis, Gripper, LED, Speaker
+[robomaster_driver-1] [WARN] [1792962396.573348346] [robomaster]: Disconnected
+[robomaster_driver-1] [INFO] [1792962396.573783112] [robomaster]: Will abort any action
+[robomaster_driver-1] [INFO] [1792962396.575134066] [robomaster]: Will stop client
+[robomaster_driver-1] 2026-10-26 00:06:37,107 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [INFO] [1792962397.112607995] [robomaster]: Has stopped client
+[robomaster_driver-1] [INFO] [1792962397.250141908] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] 2026-10-26 00:06:42,255 ERROR conn.py:345 SdkConnection: RECV TimeOut!
+[robomaster_driver-1] ERROR:sdk:SdkConnection: RECV TimeOut!
+[robomaster_driver-1] 2026-10-26 00:06:42,256 ERROR robot.py:1355 Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10306), target ('192.168.2.1', 20020).
+[robomaster_driver-1] ERROR:sdk:Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10306), target ('192.168.2.1', 20020).
+[robomaster_driver-1] 2026-10-26 00:06:42,256 ERROR client.py:70 Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] ERROR:sdk:Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] 2026-10-26 00:06:42,257 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:06:42,257 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:06:42,257 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:06:42,257 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:06:42,258 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [ERROR] [1792962402.259740011] [robomaster]: Could not connect
+[robomaster_driver-1] [INFO] [1792962402.384115262] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] 2026-10-26 00:06:47,389 ERROR conn.py:345 SdkConnection: RECV TimeOut!
+[robomaster_driver-1] ERROR:sdk:SdkConnection: RECV TimeOut!
+[robomaster_driver-1] 2026-10-26 00:06:47,389 ERROR robot.py:1355 Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10398), target ('192.168.2.1', 20020).
+[robomaster_driver-1] ERROR:sdk:Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10398), target ('192.168.2.1', 20020).
+[robomaster_driver-1] 2026-10-26 00:06:47,389 ERROR client.py:70 Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] ERROR:sdk:Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] 2026-10-26 00:06:47,391 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:06:47,391 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:06:47,391 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:06:47,391 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:06:47,391 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [ERROR] [1792962407.393332477] [robomaster]: Could not connect
+[robomaster_driver-1] [INFO] [1792962407.520412210] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] 2026-10-26 00:06:52,525 ERROR conn.py:345 SdkConnection: RECV TimeOut!
+[robomaster_driver-1] ERROR:sdk:SdkConnection: RECV TimeOut!
+[robomaster_driver-1] 2026-10-26 00:06:52,526 ERROR robot.py:1355 Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10482), target ('192.168.2.1', 20020).
+[robomaster_driver-1] ERROR:sdk:Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10482), target ('192.168.2.1', 20020).
+[robomaster_driver-1] 2026-10-26 00:06:52,526 ERROR client.py:70 Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] ERROR:sdk:Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] 2026-10-26 00:06:52,527 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:06:52,527 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:06:52,527 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:06:52,527 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:06:52,527 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [ERROR] [1792962412.529392416] [robomaster]: Could not connect
+[robomaster_driver-1] [INFO] [1792962412.652940300] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] [INFO] [1792962412.869114229] [robomaster]: Connected
+[robomaster_driver-1] [INFO] [1792962413.095305872] [robomaster]: [Arm] left servo: index 0, direction 1, value 1024, angle 0.073304
+[robomaster_driver-1] [INFO] [1792962413.095659272] [robomaster]: [Arm] right servo: index 1, direction -1, value 1024, angle -0.274016
+[robomaster_driver-1] [WARN] [1792962413.180851265] [robomaster]: [Camera] FFmpeg not available: install PyAV and ffmpeg_image_transport_msgs
+[robomaster_driver-1] [INFO] [1792962413.186299778] [robomaster]: [Chassis] Topic cmd_vel will control chassis twist
+[robomaster_driver-1] [INFO] [1792962413.477724878] [robomaster]: Enabled modules: Arm, Battery, Camera, Chassis, Gripper, LED, Speaker
+[robomaster_driver-1] [INFO] [1792962478.934867118] [robomaster]: Will abort any action
+[robomaster_driver-1] [WARN] [1792962478.935628675] [robomaster]: Disconnected
+[robomaster_driver-1] [INFO] [1792962478.936112470] [robomaster]: Will stop client
+[robomaster_driver-1] 2026-10-26 00:07:59,469 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [INFO] [1792962479.474347887] [robomaster]: Has stopped client
+[robomaster_driver-1] [INFO] [1792962479.607369922] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] [INFO] [1792962479.870915538] [robomaster]: Connected
+[robomaster_driver-1] [INFO] [1792962479.876905180] [robomaster]: [Arm] left servo: index 0, direction 1, value 1024, angle 0.073304
+[robomaster_driver-1] [INFO] [1792962479.878023210] [robomaster]: [Arm] right servo: index 1, direction -1, value 1024, angle -0.274016
+[robomaster_driver-1] [WARN] [1792962479.942810459] [robomaster]: [Camera] FFmpeg not available: install PyAV and ffmpeg_image_transport_msgs
+[robomaster_driver-1] [INFO] [1792962479.948958573] [robomaster]: [Chassis] Topic cmd_vel will control chassis twist
+[robomaster_driver-1] [INFO] [1792962480.241214662] [robomaster]: Enabled modules: Arm, Battery, Camera, Chassis, Gripper, LED, Speaker
+[robomaster_driver-1] [WARN] [1792962543.936426723] [robomaster]: Disconnected
+[robomaster_driver-1] [INFO] [1792962543.936925394] [robomaster]: Will abort any action
+[robomaster_driver-1] [INFO] [1792962543.938342137] [robomaster]: Will stop client
+[robomaster_driver-1] 2026-10-26 00:09:04,474 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [INFO] [1792962544.479743128] [robomaster]: Has stopped client
+[robomaster_driver-1] [INFO] [1792962544.616206515] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] [INFO] [1792962545.723074668] [robomaster]: Connected
+[robomaster_driver-1] [INFO] [1792962545.728349894] [robomaster]: [Arm] left servo: index 0, direction 1, value 1024, angle 0.073304
+[robomaster_driver-1] [INFO] [1792962545.729468411] [robomaster]: [Arm] right servo: index 1, direction -1, value 1024, angle -0.274016
+[robomaster_driver-1] [WARN] [1792962546.026337462] [robomaster]: [Camera] FFmpeg not available: install PyAV and ffmpeg_image_transport_msgs
+[robomaster_driver-1] [INFO] [1792962546.030878998] [robomaster]: [Chassis] Topic cmd_vel will control chassis twist
+[robomaster_driver-1] [INFO] [1792962546.772984324] [robomaster]: Enabled modules: Arm, Battery, Camera, Chassis, Gripper, LED, Speaker
+[robomaster_driver-1] [INFO] [1792962732.843256543] [robomaster]: Will abort any action
+[robomaster_driver-1] [WARN] [1792962732.844048059] [robomaster]: Disconnected
+[robomaster_driver-1] [INFO] [1792962732.844814502] [robomaster]: Will stop client
+[robomaster_driver-1] 2026-10-26 00:12:13,375 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [INFO] [1792962733.378533321] [robomaster]: Has stopped client
+[robomaster_driver-1] [INFO] [1792962733.511110956] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] 2026-10-26 00:12:18,515 ERROR conn.py:345 SdkConnection: RECV TimeOut!
+[robomaster_driver-1] ERROR:sdk:SdkConnection: RECV TimeOut!
+[robomaster_driver-1] 2026-10-26 00:12:18,515 ERROR robot.py:1355 Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10375), target ('192.168.2.1', 20020).
+[robomaster_driver-1] ERROR:sdk:Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10375), target ('192.168.2.1', 20020).
+[robomaster_driver-1] 2026-10-26 00:12:18,515 ERROR client.py:70 Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] ERROR:sdk:Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] 2026-10-26 00:12:18,517 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:12:18,517 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:12:18,517 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:12:18,518 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:12:18,518 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [ERROR] [1792962738.519839138] [robomaster]: Could not connect
+[robomaster_driver-1] [INFO] [1792962738.646109570] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] 2026-10-26 00:12:23,651 ERROR conn.py:345 SdkConnection: RECV TimeOut!
+[robomaster_driver-1] ERROR:sdk:SdkConnection: RECV TimeOut!
+[robomaster_driver-1] 2026-10-26 00:12:23,651 ERROR robot.py:1355 Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10284), target ('192.168.2.1', 20020).
+[robomaster_driver-1] ERROR:sdk:Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10284), target ('192.168.2.1', 20020).
+[robomaster_driver-1] 2026-10-26 00:12:23,651 ERROR client.py:70 Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] ERROR:sdk:Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] 2026-10-26 00:12:23,653 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:12:23,653 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:12:23,653 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:12:23,653 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:12:23,653 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [ERROR] [1792962743.655701424] [robomaster]: Could not connect
+[robomaster_driver-1] [INFO] [1792962743.782083738] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] 2026-10-26 00:12:28,787 ERROR conn.py:345 SdkConnection: RECV TimeOut!
+[robomaster_driver-1] ERROR:sdk:SdkConnection: RECV TimeOut!
+[robomaster_driver-1] 2026-10-26 00:12:28,787 ERROR robot.py:1355 Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10364), target ('192.168.2.1', 20020).
+[robomaster_driver-1] ERROR:sdk:Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10364), target ('192.168.2.1', 20020).
+[robomaster_driver-1] 2026-10-26 00:12:28,787 ERROR client.py:70 Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] ERROR:sdk:Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] 2026-10-26 00:12:28,789 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:12:28,789 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:12:28,790 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:12:28,790 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:12:28,790 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [ERROR] [1792962748.790701867] [robomaster]: Could not connect
+[robomaster_driver-1] [INFO] [1792962748.912501232] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] 2026-10-26 00:12:33,917 ERROR conn.py:345 SdkConnection: RECV TimeOut!
+[robomaster_driver-1] ERROR:sdk:SdkConnection: RECV TimeOut!
+[robomaster_driver-1] 2026-10-26 00:12:33,917 ERROR robot.py:1355 Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10226), target ('192.168.2.1', 20020).
+[robomaster_driver-1] ERROR:sdk:Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10226), target ('192.168.2.1', 20020).
+[robomaster_driver-1] 2026-10-26 00:12:33,917 ERROR client.py:70 Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] ERROR:sdk:Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] 2026-10-26 00:12:33,919 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:12:33,919 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:12:33,919 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:12:33,919 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:12:33,919 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [ERROR] [1792962753.920094028] [robomaster]: Could not connect
+[robomaster_driver-1] [INFO] [1792962754.040920213] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] [INFO] [1792962754.258072593] [robomaster]: Connected
+[robomaster_driver-1] [INFO] [1792962754.264813577] [robomaster]: [Arm] left servo: index 0, direction 1, value 1024, angle 0.073304
+[robomaster_driver-1] [INFO] [1792962754.266153910] [robomaster]: [Arm] right servo: index 1, direction -1, value 1024, angle -0.274016
+[robomaster_driver-1] [WARN] [1792962754.331038828] [robomaster]: [Camera] FFmpeg not available: install PyAV and ffmpeg_image_transport_msgs
+[robomaster_driver-1] [INFO] [1792962754.336174080] [robomaster]: [Chassis] Topic cmd_vel will control chassis twist
+[robomaster_driver-1] [INFO] [1792962754.651075054] [robomaster]: Enabled modules: Arm, Battery, Camera, Chassis, Gripper, LED, Speaker
+[robomaster_driver-1] [INFO] [1792962814.324847175] [robomaster]: Will abort any action
+[robomaster_driver-1] [WARN] [1792962814.326401153] [robomaster]: Disconnected
+[robomaster_driver-1] [INFO] [1792962814.327426639] [robomaster]: Will stop client
+[robomaster_driver-1] 2026-10-26 00:13:34,860 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [INFO] [1792962814.863956058] [robomaster]: Has stopped client
+[robomaster_driver-1] [INFO] [1792962814.986683840] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] [INFO] [1792962816.120300380] [robomaster]: Connected
+[robomaster_driver-1] [INFO] [1792962816.126296848] [robomaster]: [Arm] left servo: index 0, direction 1, value 1024, angle 0.073304
+[robomaster_driver-1] [INFO] [1792962816.127510207] [robomaster]: [Arm] right servo: index 1, direction -1, value 1024, angle -0.274016
+[robomaster_driver-1] [WARN] [1792962816.298056920] [robomaster]: [Camera] FFmpeg not available: install PyAV and ffmpeg_image_transport_msgs
+[robomaster_driver-1] [INFO] [1792962816.304654096] [robomaster]: [Chassis] Topic cmd_vel will control chassis twist
+[robomaster_driver-1] [INFO] [1792962816.926030342] [robomaster]: Enabled modules: Arm, Battery, Camera, Chassis, Gripper, LED, Speaker
+[robomaster_driver-1] [INFO] [1792962946.214175230] [robomaster]: Will abort any action
+[robomaster_driver-1] [WARN] [1792962946.215375249] [robomaster]: Disconnected
+[robomaster_driver-1] [INFO] [1792962946.216232765] [robomaster]: Will stop client
+[robomaster_driver-1] 2026-10-26 00:15:46,746 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [INFO] [1792962946.750155273] [robomaster]: Has stopped client
+[robomaster_driver-1] [INFO] [1792962946.882543734] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] [INFO] [1792962947.127826037] [robomaster]: Connected
+[robomaster_driver-1] [INFO] [1792962947.134719128] [robomaster]: [Arm] left servo: index 0, direction 1, value 1024, angle 0.073304
+[robomaster_driver-1] [INFO] [1792962947.135751317] [robomaster]: [Arm] right servo: index 1, direction -1, value 1024, angle -0.274016
+[robomaster_driver-1] [WARN] [1792962947.218733592] [robomaster]: [Camera] FFmpeg not available: install PyAV and ffmpeg_image_transport_msgs
+[robomaster_driver-1] [INFO] [1792962947.223596316] [robomaster]: [Chassis] Topic cmd_vel will control chassis twist
+[robomaster_driver-1] [INFO] [1792962947.516208063] [robomaster]: Enabled modules: Arm, Battery, Camera, Chassis, Gripper, LED, Speaker
+[robomaster_driver-1] [INFO] [1792963011.195060048] [robomaster]: Will abort any action
+[robomaster_driver-1] [WARN] [1792963011.196845758] [robomaster]: Disconnected
+[robomaster_driver-1] [INFO] [1792963011.197678759] [robomaster]: Will stop client
+[robomaster_driver-1] 2026-10-26 00:16:51,730 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [INFO] [1792963011.736023329] [robomaster]: Has stopped client
+[robomaster_driver-1] [INFO] [1792963011.877170026] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] 2026-10-26 00:16:56,881 ERROR conn.py:345 SdkConnection: RECV TimeOut!
+[robomaster_driver-1] ERROR:sdk:SdkConnection: RECV TimeOut!
+[robomaster_driver-1] 2026-10-26 00:16:56,881 ERROR robot.py:1355 Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10237), target ('192.168.2.1', 20020).
+[robomaster_driver-1] ERROR:sdk:Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10237), target ('192.168.2.1', 20020).
+[robomaster_driver-1] 2026-10-26 00:16:56,882 ERROR client.py:70 Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] ERROR:sdk:Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] 2026-10-26 00:16:56,884 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:16:56,884 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:16:56,885 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:16:56,885 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:16:56,885 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [ERROR] [1792963016.887343355] [robomaster]: Could not connect
+[robomaster_driver-1] [INFO] [1792963017.012172463] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] 2026-10-26 00:17:02,016 ERROR conn.py:345 SdkConnection: RECV TimeOut!
+[robomaster_driver-1] ERROR:sdk:SdkConnection: RECV TimeOut!
+[robomaster_driver-1] 2026-10-26 00:17:02,017 ERROR robot.py:1355 Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10407), target ('192.168.2.1', 20020).
+[robomaster_driver-1] ERROR:sdk:Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10407), target ('192.168.2.1', 20020).
+[robomaster_driver-1] 2026-10-26 00:17:02,017 ERROR client.py:70 Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] ERROR:sdk:Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] 2026-10-26 00:17:02,019 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:17:02,019 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:17:02,019 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:17:02,019 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:17:02,019 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [ERROR] [1792963022.020766557] [robomaster]: Could not connect
+[robomaster_driver-1] [INFO] [1792963022.151480656] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] 2026-10-26 00:17:07,156 ERROR conn.py:345 SdkConnection: RECV TimeOut!
+[robomaster_driver-1] ERROR:sdk:SdkConnection: RECV TimeOut!
+[robomaster_driver-1] 2026-10-26 00:17:07,157 ERROR robot.py:1355 Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10473), target ('192.168.2.1', 20020).
+[robomaster_driver-1] ERROR:sdk:Robot: Connection Failed, Please Check Hareware Connections!!! conn_type ap, host ('0.0.0.0', 10473), target ('192.168.2.1', 20020).
+[robomaster_driver-1] 2026-10-26 00:17:07,157 ERROR client.py:70 Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] ERROR:sdk:Client: __init__, create Connection, exception: module 'robomaster.config' has no attribute 'DEFAULT_CONN_PROTO'
+[robomaster_driver-1] 2026-10-26 00:17:07,159 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:17:07,159 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:17:07,159 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:17:07,159 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:17:07,159 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [ERROR] [1792963027.161603815] [robomaster]: Could not connect
+[robomaster_driver-1] [INFO] [1792963027.285491732] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] [INFO] [1792963027.489064528] [robomaster]: Connected
+[robomaster_driver-1] [INFO] [1792963027.730805348] [robomaster]: [Arm] left servo: index 0, direction 1, value 1024, angle 0.073304
+[robomaster_driver-1] [INFO] [1792963027.731941112] [robomaster]: [Arm] right servo: index 1, direction -1, value 1024, angle -0.274016
+[robomaster_driver-1] [WARN] [1792963027.804057606] [robomaster]: [Camera] FFmpeg not available: install PyAV and ffmpeg_image_transport_msgs
+[robomaster_driver-1] [INFO] [1792963027.810216728] [robomaster]: [Chassis] Topic cmd_vel will control chassis twist
+[robomaster_driver-1] [INFO] [1792963028.100450674] [robomaster]: Enabled modules: Arm, Battery, Camera, Chassis, Gripper, LED, Speaker
+[robomaster_driver-1] [WARN] [1792963093.555896538] [robomaster]: Disconnected
+[robomaster_driver-1] [INFO] [1792963093.556693222] [robomaster]: Will abort any action
+[robomaster_driver-1] [INFO] [1792963093.557735747] [robomaster]: Will stop client
+[robomaster_driver-1] 2026-10-26 00:18:14,090 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [INFO] [1792963094.094107662] [robomaster]: Has stopped client
+[robomaster_driver-1] [INFO] [1792963094.228747588] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] [INFO] [1792963094.491175978] [robomaster]: Connected
+[robomaster_driver-1] [INFO] [1792963094.498305129] [robomaster]: [Arm] left servo: index 0, direction 1, value 1024, angle 0.073304
+[robomaster_driver-1] [INFO] [1792963094.499376778] [robomaster]: [Arm] right servo: index 1, direction -1, value 1024, angle -0.274016
+[robomaster_driver-1] [WARN] [1792963094.566927218] [robomaster]: [Camera] FFmpeg not available: install PyAV and ffmpeg_image_transport_msgs
+[robomaster_driver-1] [INFO] [1792963094.573690329] [robomaster]: [Chassis] Topic cmd_vel will control chassis twist
+[robomaster_driver-1] [INFO] [1792963094.863369931] [robomaster]: Enabled modules: Arm, Battery, Camera, Chassis, Gripper, LED, Speaker
+[robomaster_driver-1] [INFO] [1792963100.015539939] [robomaster]: [Camera] Started video stream with resolution 720p
+[robomaster_driver-1] [INFO] [1792963256.749776748] [robomaster]: Will abort any action
+[robomaster_driver-1] [WARN] [1792963256.751056455] [robomaster]: Disconnected
+[robomaster_driver-1] [INFO] [1792963256.751543111] [robomaster]: Will stop client
+[robomaster_driver-1] 2026-10-26 00:20:57,796 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:20:57,796 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] 2026-10-26 00:20:57,796 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [INFO] [1792963257.800841242] [robomaster]: Has stopped client
+[robomaster_driver-1] [INFO] [1792963257.943048357] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] [INFO] [1792963258.197639823] [robomaster]: Connected
+[robomaster_driver-1] [INFO] [1792963258.203332119] [robomaster]: [Arm] left servo: index 0, direction 1, value 1024, angle 0.073304
+[robomaster_driver-1] [INFO] [1792963258.204443298] [robomaster]: [Arm] right servo: index 1, direction -1, value 1024, angle -0.274016
+[robomaster_driver-1] [WARN] [1792963258.265494386] [robomaster]: [Camera] FFmpeg not available: install PyAV and ffmpeg_image_transport_msgs
+[robomaster_driver-1] [INFO] [1792963258.270394329] [robomaster]: [Chassis] Topic cmd_vel will control chassis twist
+[robomaster_driver-1] [INFO] [1792963258.570279650] [robomaster]: Enabled modules: Arm, Battery, Camera, Chassis, Gripper, LED, Speaker
+[robomaster_driver-1] 2026-10-26 00:21:01,588 ERROR client.py:163 Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg wait msg receiver:0100, cmdset:0x3f, cmdid:0xd2 timeout!
+[robomaster_driver-1] 2026-10-26 00:21:01,589 ERROR camera.py:285 Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] ERROR:sdk:Camera: start_video_stream, stream_sdk(1) failed!
+[robomaster_driver-1] [INFO] [1792963261.590352239] [robomaster]: [Camera] Failed starting video stream
+[robomaster_driver-1] [INFO] [1792963322.265783295] [robomaster]: Will abort any action
+[robomaster_driver-1] [WARN] [1792963322.266932328] [robomaster]: Disconnected
+[robomaster_driver-1] [INFO] [1792963322.267343904] [robomaster]: Will stop client
+[robomaster_driver-1] 2026-10-26 00:22:02,801 ERROR client.py:153 Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] ERROR:sdk:Client: send_sync_msg, client recv_task is not running.
+[robomaster_driver-1] [INFO] [1792963322.803246586] [robomaster]: Has stopped client
+[robomaster_driver-1] [INFO] [1792963322.929642599] [robomaster]: Try to connect via ap to robot with sn None
+[robomaster_driver-1] [INFO] [1792963323.202713254] [robomaster]: Connected
+[robomaster_driver-1] [INFO] [1792963323.209799028] [robomaster]: [Arm] left servo: index 0, direction 1, value 1024, angle 0.073304
+[robomaster_driver-1] [INFO] [1792963323.210841203] [robomaster]: [Arm] right servo: index 1, direction -1, value 1024, angle -0.274016
+[robomaster_driver-1] [WARN] [1792963323.270352414] [robomaster]: [Camera] FFmpeg not available: install PyAV and ffmpeg_image_transport_msgs
+[robomaster_driver-1] [INFO] [1792963323.273435499] [robomaster]: [Chassis] Topic cmd_vel will control chassis twist
+[robomaster_driver-1] [INFO] [1792963323.559933890] [robomaster]: Enabled modules: Arm, Battery, Camera, Chassis, Gripper, LED, Speaker
+[robomaster_driver-1] [INFO] [1792963323.729434565] [robomaster]: [Camera] Started video stream with resolution 720p
+[robomaster_driver-1] [INFO] [1792963370.551898733] [robomaster]: [Camera] Stopped video stream

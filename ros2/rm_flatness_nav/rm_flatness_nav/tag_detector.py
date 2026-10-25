@@ -54,8 +54,10 @@ class TagDetector(Node):
         self.n_hits = 0
         self.floor_est = None       # (height, pitch_down, roll) of the camera, from the floor tag
 
-        self.create_subscription(CameraInfo, 'camera/camera_info', self.on_info, 1)
-        self.create_subscription(Image, 'camera/image_color', self.on_image, qos_profile_sensor_data)
+        self.image_sub = None
+        self.subscribe_camera()
+        self.last_image_time = self.get_clock().now()
+        self.create_timer(1.0, self.image_watchdog)
         self.point_pub = self.create_publisher(PointStamped, 'tag/point', 10)
         self.rb_pub = self.create_publisher(Float32MultiArray, 'tag/range_bearing', 10)
         self.debug_pub = self.create_publisher(Image, 'tag/debug_image', 1)
@@ -108,6 +110,23 @@ class TagDetector(Node):
         self.arm_guard_timer.cancel()
         self.arm_goal_time = None
 
+    def subscribe_camera(self):
+        """(Re)create the camera subscriptions. After a robot reconnect the driver re-creates its camera
+        publisher, and the old subscription can stay silent, so the watchdog calls this again."""
+        if self.image_sub is not None:
+            self.destroy_subscription(self.image_sub)
+            self.destroy_subscription(self.info_sub)
+        self.info_sub = self.create_subscription(CameraInfo, 'camera/camera_info', self.on_info, 1)
+        self.image_sub = self.create_subscription(Image, 'camera/image_color', self.on_image,
+                                                  qos_profile_sensor_data)
+
+    def image_watchdog(self):
+        silent = (self.get_clock().now() - self.last_image_time).nanoseconds * 1e-9
+        if silent > 2.0:
+            self.get_logger().warn(f'No camera image for {silent:.1f} s: re-subscribing')
+            self.subscribe_camera()
+            self.last_image_time = self.get_clock().now()
+
     def on_info(self, msg):
         if self.camera_params is None:
             k = msg.k
@@ -117,6 +136,7 @@ class TagDetector(Node):
 
     def on_image(self, msg):
         self.latest_image = msg
+        self.last_image_time = self.get_clock().now()
 
     def process(self):
         msg, self.latest_image = self.latest_image, None

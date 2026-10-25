@@ -1,0 +1,86 @@
+[INFO] [1792963100.129678491] [tag_detector]: Camera intrinsics 1280x720: fx=628.6 fy=625.8 cx=638.0 cy=361.6
+[WARN] [1792963100.291534913] [tag_detector]: No TF camera_optical_link -> base_link: "camera_optical_link" passed to lookupTransform argument source_frame does not exist. 
+[INFO] [1792963104.815286105] [tag_detector]: 10.2 frames/s processed, T3 seen in 45 | camera from tag: height 0.313 m, pitch +15.9 deg down, roll +0.2 deg
+[INFO] [1792963109.811099524] [tag_detector]: 14.8 frames/s processed, T3 seen in 74 | camera from tag: height 0.312 m, pitch +15.9 deg down, roll +0.0 deg
+[INFO] [1792963114.813083144] [tag_detector]: 14.8 frames/s processed, T3 seen in 74 | camera from tag: height 0.313 m, pitch +15.9 deg down, roll +0.1 deg
+[INFO] [1792963119.809391761] [tag_detector]: 10.4 frames/s processed, T3 seen in 52 | camera from tag: height 0.312 m, pitch +15.9 deg down, roll +0.1 deg
+[INFO] [1792963124.816681688] [tag_detector]: 15.0 frames/s processed, T3 seen in 75 | camera from tag: height 0.313 m, pitch +15.9 deg down, roll +0.1 deg
+[INFO] [1792963129.812062414] [tag_detector]: 14.8 frames/s processed, T3 seen in 74 | camera from tag: height 0.312 m, pitch +15.8 deg down, roll -0.0 deg
+[INFO] [1792963134.811747037] [tag_detector]: 11.2 frames/s processed, T3 seen in 56 | camera from tag: height 0.312 m, pitch +15.9 deg down, roll +0.1 deg
+[INFO] [1792963139.809718706] [tag_detector]: 14.2 frames/s processed, T3 seen in 71 | camera from tag: height 0.313 m, pitch +15.9 deg down, roll +0.0 deg
+[INFO] [1792963144.813414081] [tag_detector]: 15.0 frames/s processed, T3 seen in 75 | camera from tag: height 0.313 m, pitch +15.9 deg down, roll +0.2 deg
+[INFO] [1792963149.813507149] [tag_detector]: 11.0 frames/s processed, T3 seen in 55 | camera from tag: height 0.312 m, pitch +15.8 deg down, roll -0.0 deg
+[INFO] [1792963154.770361138] [tag_detector]: 13.0 frames/s processed, T3 seen in 65 | camera from tag: height 0.312 m, pitch +15.9 deg down, roll +0.1 deg
+[INFO] [1792963159.769942303] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963164.769905206] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963169.769939751] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963174.770097971] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963179.769659381] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963184.769660501] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963189.770102030] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963194.769756852] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963199.770132847] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963204.769479089] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963209.769840958] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963214.770093657] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963219.770130468] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963224.769699962] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963229.769347673] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963234.769735211] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963239.769340728] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963244.770061262] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963249.769727954] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963254.770648439] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963259.770547350] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963264.769774804] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963269.770111900] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963274.770553340] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963279.770116523] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963284.770435953] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963289.770148532] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963294.769801469] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963299.770062521] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963304.770254643] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963309.769347465] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963314.770817629] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963319.770676904] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963324.805550125] [tag_detector]: 3.0 frames/s processed, T3 seen in 15 | camera from tag: height 0.313 m, pitch +6.3 deg down, roll -0.1 deg
+[INFO] [1792963329.813192695] [tag_detector]: 11.6 frames/s processed, T3 seen in 58 | camera from tag: height 0.314 m, pitch +6.4 deg down, roll -0.1 deg
+WRN: Matrix is singular.
+WRN: Matrix is singular.
+[INFO] [1792963334.813167510] [tag_detector]: 15.0 frames/s processed, T3 seen in 75 | camera from tag: height 0.313 m, pitch +6.3 deg down, roll -0.0 deg
+[INFO] [1792963339.803169870] [tag_detector]: 15.0 frames/s processed, T3 seen in 75 | camera from tag: height 0.315 m, pitch +6.5 deg down, roll +0.2 deg
+[INFO] [1792963344.814590404] [tag_detector]: 11.2 frames/s processed, T3 seen in 56 | camera from tag: height 0.314 m, pitch +6.4 deg down, roll -0.0 deg
+[INFO] [1792963349.807774415] [tag_detector]: 14.6 frames/s processed, T3 seen in 73 | camera from tag: height 0.313 m, pitch +6.3 deg down, roll -0.1 deg
+[INFO] [1792963354.806999101] [tag_detector]: 15.0 frames/s processed, T3 seen in 75 | camera from tag: height 0.314 m, pitch +6.4 deg down, roll +0.0 deg
+[INFO] [1792963359.808186764] [tag_detector]: 11.6 frames/s processed, T3 seen in 58 | camera from tag: height 0.313 m, pitch +6.3 deg down, roll -0.0 deg
+[INFO] [1792963364.809048278] [tag_detector]: 15.0 frames/s processed, T3 seen in 75 | camera from tag: height 0.314 m, pitch +6.4 deg down, roll -0.1 deg
+Traceback (most recent call last):
+  File "/home/elzoz/ros2_ws/install/rm_flatness_nav/lib/rm_flatness_nav/tag_detector", line 33, in <module>
+    sys.exit(load_entry_point('rm-flatness-nav', 'console_scripts', 'tag_detector')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/elzoz/ros2_ws/build/rm_flatness_nav/rm_flatness_nav/tag_detector.py", line 185, in main
+    rclpy.spin(node)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 247, in spin
+    executor.spin_once()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 926, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 918, in _spin_once_impl
+    raise handler.exception()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/task.py", line 286, in _execute_coroutine_step
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 592, in handler
+    await call_coroutine()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 454, in _execute
+    await await_or_execute(tmr.callback)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 115, in await_or_execute
+    return callback(*args)
+           ^^^^^^^^^^^^^^^
+  File "/home/elzoz/ros2_ws/build/rm_flatness_nav/rm_flatness_nav/tag_detector.py", line 131, in process
+    if self.debug_pub.get_subscription_count() > 0:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/publisher.py", line 79, in get_subscription_count
+    return self.__publisher.get_subscription_count()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rclpy._rclpy_pybind11.RCLError: failed to get subscription count: publisher's context is invalid, at ./src/rcl/publisher.c:423

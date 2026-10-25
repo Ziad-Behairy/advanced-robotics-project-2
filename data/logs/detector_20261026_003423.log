@@ -1,0 +1,119 @@
+[INFO] [1792964066.690408541] [tag_detector]: Camera intrinsics 1280x720: fx=628.6 fy=625.8 cx=638.0 cy=361.6
+[INFO] [1792964070.671325421] [tag_detector]: 11.2 frames/s processed, T3 seen in 56 | camera from tag: height 0.311 m, pitch +6.3 deg down, roll +0.2 deg
+[INFO] [1792964075.678345382] [tag_detector]: 14.2 frames/s processed, T3 seen in 71 | camera from tag: height 0.311 m, pitch +6.3 deg down, roll +0.2 deg
+[INFO] [1792964080.669396914] [tag_detector]: 11.8 frames/s processed, T3 seen in 59 | camera from tag: height 0.312 m, pitch +6.3 deg down, roll +0.1 deg
+[INFO] [1792964085.678043734] [tag_detector]: 14.6 frames/s processed, T3 seen in 73 | camera from tag: height 0.310 m, pitch +6.2 deg down, roll +0.1 deg
+[INFO] [1792964090.680696833] [tag_detector]: 14.0 frames/s processed, T3 seen in 70 | camera from tag: height 0.311 m, pitch +6.3 deg down, roll +0.0 deg
+[INFO] [1792964095.654575769] [tag_detector]: 12.4 frames/s processed, T3 seen in 62 | camera from tag: height 0.313 m, pitch +6.3 deg down, roll -0.0 deg
+[INFO] [1792964100.668380942] [tag_detector]: 15.0 frames/s processed, T3 seen in 75 | camera from tag: height 0.311 m, pitch +6.2 deg down, roll +0.0 deg
+[INFO] [1792964105.682615843] [tag_detector]: 14.2 frames/s processed, T3 seen in 71 | camera from tag: height 0.311 m, pitch +6.3 deg down, roll +0.1 deg
+[INFO] [1792964110.657201772] [tag_detector]: 12.4 frames/s processed, T3 seen in 62 | camera from tag: height 0.312 m, pitch +6.3 deg down, roll -0.1 deg
+[INFO] [1792964115.664656892] [tag_detector]: 15.0 frames/s processed, T3 seen in 75 | camera from tag: height 0.312 m, pitch +6.3 deg down, roll +0.1 deg
+[INFO] [1792964120.682694473] [tag_detector]: 13.8 frames/s processed, T3 seen in 69 | camera from tag: height 0.311 m, pitch +6.2 deg down, roll +0.1 deg
+[INFO] [1792964125.661411703] [tag_detector]: 12.4 frames/s processed, T3 seen in 62 | camera from tag: height 0.312 m, pitch +6.3 deg down, roll +0.2 deg
+[INFO] [1792964130.665436263] [tag_detector]: 15.0 frames/s processed, T3 seen in 75 | camera from tag: height 0.311 m, pitch +6.2 deg down, roll +0.1 deg
+[INFO] [1792964135.678947051] [tag_detector]: 14.2 frames/s processed, T3 seen in 71 | camera from tag: height 0.311 m, pitch +6.2 deg down, roll +0.2 deg
+[INFO] [1792964140.668798802] [tag_detector]: 12.6 frames/s processed, T3 seen in 63 | camera from tag: height 0.312 m, pitch +6.3 deg down, roll +0.2 deg
+[INFO] [1792964145.627139327] [tag_detector]: 13.4 frames/s processed, T3 seen in 67 | camera from tag: height 0.312 m, pitch +6.3 deg down, roll +0.1 deg
+[WARN] [1792964147.624488157] [tag_detector]: No camera image for 2.5 s: re-subscribing
+[WARN] [1792964150.624577140] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964150.631170503] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964153.624011191] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964155.627129432] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964156.624380124] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[WARN] [1792964159.624176679] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964160.627125249] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964162.624085658] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[WARN] [1792964165.624836909] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964165.630711667] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964168.624117616] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964170.627052844] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964171.624308204] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[WARN] [1792964174.624217448] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964175.627083523] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964177.623958005] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[WARN] [1792964180.623788289] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964180.628562547] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964183.624209348] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964185.627501032] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964186.623405780] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[WARN] [1792964189.623833509] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964190.627226814] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964192.623639208] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[WARN] [1792964195.624244861] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964195.631206148] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964198.624272625] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964200.627843388] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964201.624209300] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[WARN] [1792964204.624168728] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964205.627066501] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964207.624239191] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[WARN] [1792964210.623716332] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964210.630330085] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964213.623816730] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964215.627119649] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964216.623953851] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[WARN] [1792964219.624230085] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964220.626822719] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964222.623919844] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[WARN] [1792964225.624618669] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964225.631350454] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964228.623837531] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964230.627105886] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964231.624093955] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[WARN] [1792964234.624253148] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964235.627126692] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964237.624139809] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[WARN] [1792964240.624204837] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964240.630430686] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964243.624252396] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964245.627066165] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964246.624072890] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[WARN] [1792964249.623999047] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964250.627067389] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964252.623774479] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[WARN] [1792964255.624215287] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964255.630301941] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964258.624162376] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964260.626765455] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964261.624226585] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[WARN] [1792964264.624278565] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964265.627088504] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964267.624188692] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[WARN] [1792964270.623369315] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964270.627189947] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964273.624078773] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964275.627045898] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964276.623953756] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[WARN] [1792964279.624213565] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964280.627567868] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964282.624425389] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[WARN] [1792964285.624171715] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964285.629255298] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964288.624216822] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964290.627220513] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964291.624220302] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[WARN] [1792964294.624456005] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964295.626282886] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[WARN] [1792964297.623884963] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[WARN] [1792964300.623304702] [tag_detector]: No camera image for 3.0 s: re-subscribing
+[INFO] [1792964300.627540543] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+Traceback (most recent call last):
+  File "/home/elzoz/ros2_ws/install/rm_flatness_nav/lib/rm_flatness_nav/tag_detector", line 33, in <module>
+    sys.exit(load_entry_point('rm-flatness-nav', 'console_scripts', 'tag_detector')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/elzoz/ros2_ws/build/rm_flatness_nav/rm_flatness_nav/tag_detector.py", line 205, in main
+    rclpy.spin(node)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 247, in spin
+    executor.spin_once()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 926, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 907, in _spin_once_impl
+    handler, entity, node = self.wait_for_ready_callbacks(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 877, in wait_for_ready_callbacks
+    return next(self._cb_iter)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 785, in _wait_for_ready_callbacks
+    raise ExternalShutdownException()
+rclpy.executors.ExternalShutdownException

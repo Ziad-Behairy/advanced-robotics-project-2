@@ -1,0 +1,3 @@
+wall_time,tape_m,slant_mean_m,slant_std_m,d_front_mean_m,d_front_std_m,n_detections,secs,height_m,cam_behind_front_m
+2026-10-26T00:32:15,1.000,1.0690,0.0009,0.8732,0.0009,73,5.0,0.313,0.149
+2026-10-26T00:34:37,0.600,0.7608,0.0004,0.5444,0.0004,63,5.0,0.313,0.149

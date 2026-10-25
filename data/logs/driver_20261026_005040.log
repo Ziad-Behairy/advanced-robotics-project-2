@@ -1,0 +1,15 @@
+[INFO] [launch]: All log files can be found below /home/elzoz/.ros/log/2026-10-26-00-50-41-308018-Elzoz-IdeaPad-Gaming-3-388809
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [robomaster_driver-1]: process started with pid [388838]
+[INFO] [robot_state_publisher-2]: process started with pid [388839]
+[INFO] [joint_state_publisher-3]: process started with pid [388840]
+[robomaster_driver-1] [INFO] [1792965042.703551752] [robomaster]: Waiting for a robot
+[robomaster_driver-1] [INFO] [1792965043.018862165] [robomaster]: Found a robot
+[robomaster_driver-1] [INFO] [1792965043.019292390] [robomaster]: Try to connect via sta to robot with sn None
+[robomaster_driver-1] [INFO] [1792965044.258322009] [robomaster]: Connected
+[robomaster_driver-1] [INFO] [1792965044.288720113] [robomaster]: [Arm] left servo: index 0, direction 1, value 1024, angle 0.073304
+[robomaster_driver-1] [INFO] [1792965044.289802310] [robomaster]: [Arm] right servo: index 1, direction -1, value 1024, angle -0.274016
+[robomaster_driver-1] [WARN] [1792965044.401143854] [robomaster]: [Camera] FFmpeg not available: install PyAV and ffmpeg_image_transport_msgs
+[robomaster_driver-1] [INFO] [1792965044.407584933] [robomaster]: [Chassis] Topic cmd_vel will control chassis twist
+[robomaster_driver-1] [INFO] [1792965044.823176899] [robomaster]: Enabled modules: Arm, Battery, Camera, Chassis, Gripper, LED, Speaker, ToF
+[robomaster_driver-1] [INFO] [1792965073.850158688] [robomaster]: [Camera] Started video stream with resolution 720p

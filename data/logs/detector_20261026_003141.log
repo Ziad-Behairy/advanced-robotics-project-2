@@ -1,0 +1,51 @@
+[INFO] [1792963903.207450523] [tag_detector]: Camera intrinsics 1280x720: fx=628.6 fy=625.8 cx=638.0 cy=361.6
+[INFO] [1792963908.050002189] [tag_detector]: 13.2 frames/s processed, T3 seen in 66 | camera from tag: height 0.313 m, pitch +6.6 deg down, roll +0.2 deg
+[INFO] [1792963913.043792230] [tag_detector]: 10.0 frames/s processed, T3 seen in 50 | camera from tag: height 0.313 m, pitch +6.6 deg down, roll +0.1 deg
+[INFO] [1792963918.050147239] [tag_detector]: 14.2 frames/s processed, T3 seen in 71 | camera from tag: height 0.311 m, pitch +6.5 deg down, roll -0.0 deg
+[INFO] [1792963923.044573069] [tag_detector]: 14.6 frames/s processed, T3 seen in 73 | camera from tag: height 0.312 m, pitch +6.5 deg down, roll +0.2 deg
+[INFO] [1792963928.038911611] [tag_detector]: 10.6 frames/s processed, T3 seen in 53 | camera from tag: height 0.313 m, pitch +6.5 deg down, roll +0.2 deg
+[INFO] [1792963933.045540649] [tag_detector]: 14.2 frames/s processed, T3 seen in 71 | camera from tag: height 0.312 m, pitch +6.5 deg down, roll +0.1 deg
+[INFO] [1792963938.045756309] [tag_detector]: 14.6 frames/s processed, T3 seen in 73 | camera from tag: height 0.311 m, pitch +6.5 deg down, roll +0.1 deg
+[INFO] [1792963943.001751490] [tag_detector]: 7.4 frames/s processed, T3 seen in 37 | camera from tag: height 0.312 m, pitch +6.5 deg down, roll +0.2 deg
+[INFO] [1792963948.001065684] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963953.001755034] [tag_detector]: 0.2 frames/s processed, T3 seen in 1 | camera from tag: height 0.312 m, pitch +6.5 deg down, roll +0.2 deg
+[INFO] [1792963958.001372971] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963963.000908115] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963968.000685516] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963973.000887604] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963978.001365340] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963983.001647083] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963988.001200571] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963993.001208793] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792963998.001943159] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792964003.001274744] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792964008.001535301] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792964013.002183557] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792964018.001262330] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792964023.001646185] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792964028.001237277] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792964033.001282222] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792964038.000783538] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792964043.000928544] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792964048.001162347] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792964053.000940461] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+Traceback (most recent call last):
+  File "/home/elzoz/ros2_ws/install/rm_flatness_nav/lib/rm_flatness_nav/tag_detector", line 33, in <module>
+    sys.exit(load_entry_point('rm-flatness-nav', 'console_scripts', 'tag_detector')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/elzoz/ros2_ws/build/rm_flatness_nav/rm_flatness_nav/tag_detector.py", line 185, in main
+    cv2.line(img, (w // 2, 0), (w // 2, h), (255, 255, 255), 1)
+    ^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 247, in spin
+    executor.spin_once()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 926, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 907, in _spin_once_impl
+    handler, entity, node = self.wait_for_ready_callbacks(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 877, in wait_for_ready_callbacks
+    return next(self._cb_iter)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 785, in _wait_for_ready_callbacks
+    raise ExternalShutdownException()
+rclpy.executors.ExternalShutdownException

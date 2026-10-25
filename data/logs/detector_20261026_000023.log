@@ -1,0 +1,54 @@
+[INFO] [1792962058.598366597] [tag_detector]: Camera intrinsics 1280x720: fx=628.6 fy=625.8 cx=638.0 cy=361.6
+[INFO] [1792962059.259441537] [tag_detector]: Arm init goal sent: x=0.105 m, z=0.030 m
+[INFO] [1792962063.263551098] [tag_detector]: 14.0 frames/s processed, T3 seen in 68
+[INFO] [1792962068.255690714] [tag_detector]: 11.0 frames/s processed, T3 seen in 47
+[INFO] [1792962073.266768790] [tag_detector]: 14.8 frames/s processed, T3 seen in 73
+[INFO] [1792962078.260207219] [tag_detector]: 15.0 frames/s processed, T3 seen in 75
+Error, more than one new minima found.
+Error, more than one new minima found.
+Error, more than one new minima found.
+Error, more than one new minima found.
+[INFO] [1792962083.266029682] [tag_detector]: 11.0 frames/s processed, T3 seen in 42
+Error, more than one new minima found.
+Error, more than one new minima found.
+Error, more than one new minima found.
+Error, more than one new minima found.
+Error, more than one new minima found.
+Error, more than one new minima found.
+[INFO] [1792962088.267044881] [tag_detector]: 15.0 frames/s processed, T3 seen in 29
+[INFO] [1792962093.272177989] [tag_detector]: 15.0 frames/s processed, T3 seen in 49
+[INFO] [1792962098.218277696] [tag_detector]: 10.0 frames/s processed, T3 seen in 50
+[INFO] [1792962103.218659240] [tag_detector]: 0.0 frames/s processed, T3 seen in 0
+[INFO] [1792962108.258006516] [tag_detector]: 9.4 frames/s processed, T3 seen in 41
+[INFO] [1792962113.257668236] [tag_detector]: 11.0 frames/s processed, T3 seen in 53
+[INFO] [1792962118.256299814] [tag_detector]: 15.0 frames/s processed, T3 seen in 60
+[INFO] [1792962123.253811790] [tag_detector]: 15.0 frames/s processed, T3 seen in 68
+Traceback (most recent call last):
+  File "/home/elzoz/ros2_ws/install/rm_flatness_nav/lib/rm_flatness_nav/tag_detector", line 33, in <module>
+    sys.exit(load_entry_point('rm-flatness-nav', 'console_scripts', 'tag_detector')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/elzoz/ros2_ws/build/rm_flatness_nav/rm_flatness_nav/tag_detector.py", line 141, in main
+    rclpy.spin(node)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 247, in spin
+    executor.spin_once()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 926, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 918, in _spin_once_impl
+    raise handler.exception()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/task.py", line 286, in _execute_coroutine_step
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 592, in handler
+    await call_coroutine()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 454, in _execute
+    await await_or_execute(tmr.callback)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 115, in await_or_execute
+    return callback(*args)
+           ^^^^^^^^^^^^^^^
+  File "/home/elzoz/ros2_ws/build/rm_flatness_nav/rm_flatness_nav/tag_detector.py", line 93, in process
+    if self.debug_pub.get_subscription_count() > 0:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/publisher.py", line 79, in get_subscription_count
+    return self.__publisher.get_subscription_count()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rclpy._rclpy_pybind11.RCLError: failed to get subscription count: publisher's context is invalid, at ./src/rcl/publisher.c:423
