@@ -1,6 +1,8 @@
 """AprilTag detector node (A2 Problem 1).
 
-- Moves the arm to the downward camera pose (SDK X = 105 mm, Y = 30 mm) once at startup.
+- Optionally moves the arm to the downward camera pose (SDK X = 105 mm, Y = 30 mm) at startup.
+  OFF by default: on this robot that pose drives the arm into the ToF sensor. When enabled, a stall guard
+  holds the arm where it is if the target is not reached within arm_timeout (no endless pushing).
 - Detects the target tag in camera/image_color with pupil-apriltags.
 - Publishes the tag center in the base frame (tag/point) plus ground range and bearing (tag/range_bearing).
 
@@ -13,7 +15,7 @@ import cv2
 import numpy as np
 import rclpy
 from cv_bridge import CvBridge
-from geometry_msgs.msg import PointStamped
+from geometry_msgs.msg import Point, PointStamped
 from pupil_apriltags import Detector
 from rclpy.action import ActionClient
 from rclpy.node import Node
@@ -35,9 +37,11 @@ class TagDetector(Node):
         self.base_frame = self.declare_parameter('base_frame', 'base_link').value
         self.rate = self.declare_parameter('rate', 15.0).value
         self.decimate = self.declare_parameter('quad_decimate', 1.0).value
-        self.init_arm = self.declare_parameter('init_arm', True).value
+        self.init_arm = self.declare_parameter('init_arm', False).value
         self.arm_x = self.declare_parameter('arm_x', 0.105).value  # m, SDK X
         self.arm_z = self.declare_parameter('arm_z', 0.030).value  # m, SDK Y (up)
+        self.arm_timeout = self.declare_parameter('arm_timeout', 4.0).value  # s
+        self.arm_tolerance = self.declare_parameter('arm_tolerance', 0.008).value  # m
 
         self.detector = Detector(families='tag36h11', quad_decimate=self.decimate, refine_edges=True)
         self.bridge = CvBridge()
@@ -57,9 +61,15 @@ class TagDetector(Node):
         self.create_timer(1.0 / self.rate, self.process)
         self.create_timer(5.0, self.report)
 
+        self.arm_pos = None
+        self.arm_goal_time = None
+        self.arm_goal_handle = None
         if self.init_arm:
+            self.create_subscription(PointStamped, 'arm_position', self.on_arm_position, 10)
+            self.arm_hold_pub = self.create_publisher(Point, 'target_arm_position', 10)
             self.arm_client = ActionClient(self, MoveArm, 'move_arm')
             self.arm_timer = self.create_timer(1.0, self.send_arm_goal)
+            self.arm_guard_timer = self.create_timer(0.2, self.guard_arm)
 
     def send_arm_goal(self):
         if not self.arm_client.server_is_ready():
@@ -67,8 +77,35 @@ class TagDetector(Node):
             return
         self.arm_timer.cancel()
         goal = MoveArm.Goal(x=self.arm_x, z=self.arm_z, relative=False)
-        self.arm_client.send_goal_async(goal)
+        self.arm_client.send_goal_async(goal).add_done_callback(self.on_arm_goal_accepted)
+        self.arm_goal_time = self.get_clock().now()
         self.get_logger().info(f'Arm init goal sent: x={self.arm_x:.3f} m, z={self.arm_z:.3f} m')
+
+    def on_arm_goal_accepted(self, future):
+        self.arm_goal_handle = future.result()
+
+    def on_arm_position(self, msg):
+        self.arm_pos = (msg.point.x, msg.point.z)
+
+    def guard_arm(self):
+        """Stop the arm move once it arrives, or hold it in place if it stalls (e.g. blocked by the ToF)."""
+        if self.arm_goal_time is None or self.arm_pos is None:
+            return
+        err = np.hypot(self.arm_pos[0] - self.arm_x, self.arm_pos[1] - self.arm_z)
+        elapsed = (self.get_clock().now() - self.arm_goal_time).nanoseconds * 1e-9
+        if err <= self.arm_tolerance:
+            self.get_logger().info(f'Arm reached x={self.arm_pos[0]:.3f} z={self.arm_pos[1]:.3f} m')
+        elif elapsed > self.arm_timeout:
+            if self.arm_goal_handle is not None:
+                self.arm_goal_handle.cancel_goal_async()
+            x, z = self.arm_pos
+            self.arm_hold_pub.publish(Point(x=x, y=0.0, z=z))
+            self.get_logger().error(f'Arm stalled {err * 1000:.0f} mm from target after {elapsed:.1f} s: '
+                                    f'holding at x={x:.3f} z={z:.3f} m. Check for a collision.')
+        else:
+            return
+        self.arm_guard_timer.cancel()
+        self.arm_goal_time = None
 
     def on_info(self, msg):
         if self.camera_params is None:
