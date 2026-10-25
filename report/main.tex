@@ -1,0 +1,272 @@
+%==============================================================================
+%  SCE 672 Advanced Robotics (Term 261) - Assessment 2 Technical Report
+%  Differential Flatness Pursuit and Motor Voltage Dynamics (RoboMaster EP Core)
+%  Overleaf: upload overleaf_upload.zip (main.tex, sections/, figures/, kfupm_logo.png),
+%  compile with pdfLaTeX. Figures and generated tables come from analysis/run_all.py.
+%==============================================================================
+\documentclass[11pt,a4paper]{article}
+
+%------------------------------ STUDENT DETAILS -------------------------------
+\newcommand{\studentName}{Ziad Aboelkhir}
+\newcommand{\studentID}{g202622300}
+\newcommand{\studentProgram}{Ph.D. (Direct), Systems \& Control Engineering}
+\newcommand{\studentDept}{Control \& Instrumentation Engineering (CIE)}
+\newcommand{\instructor}{Prof.\ Aamer Iqbal Bhatti}
+\newcommand{\courseCode}{SCE 672}
+\newcommand{\courseName}{Advanced Robotics}
+\newcommand{\termLine}{Term 261 (Fall 2026)}
+\newcommand{\submitDate}{October 26, 2026}
+\newcommand{\repoURL}{https://github.com/Ziad-Behairy/advanced-robotics-project-2}
+% >>> PLACEHOLDER: replace with the shared link of video/A2_demo_side_by_side.mp4 <<<
+\newcommand{\videolink}{VIDEO-LINK-TBD}
+
+%-------------------------------- PACKAGES ------------------------------------
+\usepackage[a4paper,top=2.3cm,bottom=2.3cm,left=2.2cm,right=2.2cm,headheight=16pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\DisableLigatures[-]{encoding = T1, family = tt*}
+\linespread{1.04}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{fontawesome5}
+\usepackage{tabularx,booktabs,array,multirow}
+\usepackage{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,shapes.geometric,shapes.misc,decorations.pathreplacing,patterns}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+
+%--------------------------------- COLOURS ------------------------------------
+\definecolor{kfupm}{RGB}{12,126,64}
+\definecolor{kfupmdark}{RGB}{6,84,42}
+\definecolor{kfupmlight}{RGB}{233,244,237}
+\definecolor{ink}{RGB}{33,37,41}
+\definecolor{muted}{RGB}{105,112,120}
+\definecolor{warn}{RGB}{176,96,0}
+\definecolor{alert}{RGB}{190,50,45}
+\definecolor{accblue}{HTML}{2A78D6}
+\definecolor{accorange}{HTML}{EB6834}
+\definecolor{accpurple}{HTML}{7B3FA0}
+\definecolor{accgold}{HTML}{D4A017}
+\definecolor{accred}{HTML}{C0392B}
+\definecolor{codebg}{RGB}{246,248,247}
+% mission states (same colors as every plot)
+\definecolor{cSEARCHING}{HTML}{EB6834}
+\definecolor{cALIGNING}{HTML}{2A78D6}
+\definecolor{cCHASING}{HTML}{0B7A3E}
+\definecolor{cARRIVED}{HTML}{7B3FA0}
+\color{ink}
+
+\hypersetup{
+  colorlinks=true, linkcolor=kfupm, urlcolor=kfupm, citecolor=kfupm,
+  pdftitle={SCE 672 Assessment 2: Differential flatness pursuit and motor voltage dynamics},
+  pdfauthor={\studentName}, pdfsubject={SCE 672 Advanced Robotics, Assessment 2},
+  pdfkeywords={RoboMaster EP, ROS 2 Jazzy, AprilTag, differential flatness, cubic trajectory, motor voltage}
+}
+
+%---------------------------------- LAYOUT ------------------------------------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\raggedbottom
+\setlength{\intextsep}{9pt plus 2pt minus 2pt}
+\setlist{itemsep=2pt,parsep=0pt,topsep=3pt,leftmargin=1.4em,labelsep=0.5em}
+\setlist[itemize]{label=\textcolor{kfupm}{\scriptsize\faCaretRight}}
+\setlist[enumerate]{label=\textcolor{kfupm}{\bfseries\arabic*.}}
+\renewcommand{\arraystretch}{1.25}
+\DeclareRobustCommand{\code}[1]{\texttt{\detokenize{#1}}}
+\newcommand{\link}[2]{\href{#1}{\textcolor{kfupm}{#2}}}
+\newcommand{\hd}[1]{\textcolor{white}{\bfseries #1}}      % table header cell
+\newcommand{\lead}[1]{\textbf{\color{kfupmdark}#1}\enspace}  % run-in paragraph lead
+% colored state badge, e.g. \stbadge{CHASING}
+\newcommand{\stbadge}[1]{{\setlength{\fboxsep}{1.6pt}\colorbox{c#1!16}{\textcolor{c#1}{\scriptsize\bfseries\sffamily #1}}}}
+
+% section style: green numbered badge + title + thin rule
+\titleformat{\section}[hang]{\normalfont\LARGE\bfseries\color{kfupmdark}}
+  {\tikz[baseline=(b.base)]\node[fill=kfupm,text=white,rounded corners=3pt,inner sep=4pt,
+     minimum width=20pt,font=\Large\bfseries](b){\thesection};}{10pt}{}
+  [\vspace{2pt}{\color{kfupm!45}\titlerule[0.8pt]}]
+\titleformat{\subsection}{\normalfont\Large\bfseries\color{kfupm}}{\thesubsection}{9pt}{}
+\titlespacing*{\section}{0pt}{14pt}{8pt}
+\titlespacing*{\subsection}{0pt}{10pt}{4pt}
+\newcommand{\isec}[2]{\section{\texorpdfstring{\textcolor{kfupm}{#1}\hspace{8pt}}{}#2}}
+\newcommand{\isub}[2]{\subsection{\texorpdfstring{\textcolor{kfupm}{\normalsize #1}\hspace{6pt}}{}#2}}
+
+% header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{kfupm!50}\leaders\hrule height \headrulewidth\hfill}}
+\fancyhead[L]{\small\color{kfupmdark}\faRobot\ \courseCode\ \courseName\ \textbullet\ Assessment 2}
+\fancyhead[R]{\small\color{muted}\studentName\ \textbullet\ \studentID}
+\fancyfoot[C]{\small\color{kfupm}\bfseries\thepage}
+\fancyfoot[R]{\scriptsize\color{muted}KFUPM \textbullet\ CIE}
+
+% captions
+\captionsetup{font=small,labelfont={bf,color=kfupmdark},labelsep=period,skip=5pt}
+\captionsetup[sub]{font=footnotesize}
+
+% boxes
+\newtcolorbox{keybox}[2][]{enhanced,colback=kfupmlight,colframe=kfupm,arc=2.5pt,boxrule=0.7pt,
+  left=7pt,right=7pt,top=4pt,bottom=5pt,fonttitle=\bfseries\small,coltitle=white,
+  title={#2},attach boxed title to top left={xshift=7pt,yshift=-2mm},
+  boxed title style={colback=kfupm,arc=2pt,boxrule=0pt},before skip=10pt,after skip=8pt,#1}
+\newtcolorbox{bluebox}[2][]{enhanced,colback=accblue!5,colframe=accblue!80,arc=2.5pt,boxrule=0.7pt,
+  left=7pt,right=7pt,top=4pt,bottom=5pt,fonttitle=\bfseries\small,coltitle=white,
+  title={#2},attach boxed title to top left={xshift=7pt,yshift=-2mm},
+  boxed title style={colback=accblue,arc=2pt,boxrule=0pt},before skip=10pt,after skip=8pt,#1}
+\newtcolorbox{purplebox}[2][]{enhanced,colback=accpurple!5,colframe=accpurple!80,arc=2.5pt,boxrule=0.7pt,
+  left=7pt,right=7pt,top=4pt,bottom=5pt,fonttitle=\bfseries\small,coltitle=white,
+  title={#2},attach boxed title to top left={xshift=7pt,yshift=-2mm},
+  boxed title style={colback=accpurple,arc=2pt,boxrule=0pt},before skip=10pt,after skip=8pt,#1}
+\newtcolorbox{notebox}[1][]{enhanced,colback=white,colframe=kfupm!55,arc=2pt,boxrule=0.5pt,
+  borderline west={2.6pt}{0pt}{kfupm},left=8pt,right=7pt,top=4pt,bottom=4pt,
+  before skip=8pt,after skip=8pt,#1}
+\newtcolorbox{warnbox}[1][]{enhanced,colback=warn!6,colframe=warn!70,arc=2pt,boxrule=0.5pt,
+  borderline west={2.6pt}{0pt}{warn},left=8pt,right=7pt,top=4pt,bottom=4pt,
+  before skip=8pt,after skip=8pt,#1}
+\newcommand{\stat}[4][kfupm]{%
+  \begin{tcolorbox}[enhanced,width=0.235\linewidth,nobeforeafter,colback=white,colframe=#1!60,
+    borderline north={2.5pt}{0pt}{#1},arc=3pt,boxrule=0.6pt,halign=center,valign=center,height=2.4cm,left=2pt,right=2pt]
+  {\color{#1}\Large #2}\\[3pt]{\color{kfupmdark}\Large\bfseries #3}\\[2pt]{\footnotesize\color{muted}#4}
+  \end{tcolorbox}}
+
+% code listings
+\lstdefinestyle{sh}{language=bash,basicstyle=\ttfamily\footnotesize,backgroundcolor=\color{codebg},
+  frame=leftline,framerule=2.6pt,rulecolor=\color{kfupm},xleftmargin=9pt,framexleftmargin=7pt,
+  keywordstyle=\color{kfupmdark}\bfseries,commentstyle=\color{muted}\itshape,stringstyle=\color{warn},
+  showstringspaces=false,columns=fullflexible,keepspaces=true,breaklines=true,upquote=true,
+  aboveskip=8pt,belowskip=6pt}
+\lstdefinestyle{py}{language=Python,basicstyle=\ttfamily\footnotesize,backgroundcolor=\color{codebg},
+  frame=leftline,framerule=2.6pt,rulecolor=\color{accblue},xleftmargin=9pt,framexleftmargin=7pt,
+  keywordstyle=\color{accblue}\bfseries,commentstyle=\color{muted}\itshape,stringstyle=\color{warn},
+  showstringspaces=false,columns=fullflexible,keepspaces=true,breaklines=true,upquote=true,
+  numbers=left,numberstyle=\tiny\color{muted},numbersep=6pt,aboveskip=8pt,belowskip=6pt}
+
+% tikz styles
+\tikzset{
+  blk/.style={draw=kfupm,fill=kfupmlight,rounded corners=3pt,align=center,inner sep=5pt,
+              font=\small,text width=#1},
+  blk/.default=4cm,
+  grp/.style={draw=kfupmdark,thick,rounded corners=6pt,inner sep=9pt},
+  arr/.style={-{Latex[length=2.4mm]},thick,color=kfupmdark},
+  biarr/.style={{Latex[length=2.4mm]}-{Latex[length=2.4mm]},thick},
+  topic/.style={draw=muted,fill=white,rounded corners=1pt,font=\footnotesize\ttfamily,inner sep=3pt},
+  rosnode/.style={draw=kfupm,fill=kfupmlight,ellipse,font=\footnotesize\ttfamily,inner sep=1.5pt},
+  lbl/.style={font=\scriptsize,color=muted,align=center},
+  stnode/.style={draw=c#1,fill=c#1!10,line width=1.1pt,rounded corners=6pt,align=center,
+                 inner sep=5pt,text width=3.5cm,font=\small},
+  tr/.style={-{Latex[length=2.6mm]},thick,color=ink},
+  trl/.style={font=\scriptsize,align=center,fill=white,inner sep=1.5pt}
+}
+
+%==============================================================================
+\begin{document}
+
+%================================= COVER ======================================
+\begin{titlepage}
+\newgeometry{top=0cm,bottom=0cm,left=0cm,right=0cm}
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[kfupm] (current page.north west) rectangle ([yshift=-6.3cm]current page.north east);
+  \fill[kfupmdark] ([yshift=-6.3cm]current page.north west) rectangle ([yshift=-6.55cm]current page.north east);
+  % thin colored strip with the four mission states
+  \foreach \col [count=\i from 0] in {cSEARCHING,cALIGNING,cCHASING,cARRIVED}{
+    \fill[fill=\col] ([xshift=\i*5.25cm,yshift=-6.55cm]current page.north west) rectangle
+              ([xshift=\i*5.25cm+5.25cm,yshift=-6.75cm]current page.north west);}
+  \fill[kfupm] (current page.south west) rectangle ([yshift=1.3cm]current page.south east);
+  \node[fill=white,circle,inner sep=10pt,draw=kfupmdark,line width=2pt] at ([yshift=-6.4cm]current page.north)
+       {\includegraphics[width=3.9cm]{kfupm_logo.png}};
+  \node[text=white,align=center,font=\Large\bfseries] at ([yshift=-1.55cm]current page.north)
+       {King Fahd University of Petroleum \& Minerals};
+  \node[text=white,align=center,font=\large] at ([yshift=-2.35cm]current page.north)
+       {College of Engineering and Physics \textbullet\ \studentDept};
+  \node[text=white,align=center,font=\normalsize] at ([yshift=0.65cm]current page.south)
+       {\faUniversity\ Dhahran, Saudi Arabia \quad\textbullet\quad \submitDate};
+\end{tikzpicture}
+\vspace*{10.2cm}
+\begin{center}
+  {\color{kfupm}\large\bfseries \courseCode\ \textbullet\ \courseName\ \textbullet\ \termLine\par}
+  \vspace{0.45cm}
+  {\color{kfupmdark}\fontsize{26}{31}\selectfont\bfseries Assessment 2 Technical Report\par}
+  \vspace{0.35cm}
+  {\Large Differential Flatness Pursuit and\\[3pt] Motor Voltage Dynamics\par}
+  \vspace{0.3cm}
+  {\color{muted}\large AprilTag search, in-place centering, cubic flat-output pursuit and a 20\,cm halt\\
+   on the DJI RoboMaster EP Core with ROS 2 Jazzy\par}
+  \vspace{0.8cm}
+  \begin{minipage}{16.4cm}
+  \stat[kfupm]{\faBullseye}{20\,cm}{standoff, tape measured}\hfill
+  \stat[accblue]{\faTachometerAlt}{0.137\,m/s}{peak speed ($v_{max}$ 0.16)}\hfill
+  \stat[accpurple]{\faBolt}{0.000\,V}{all motors after ARRIVED}\hfill
+  \stat[accorange]{\faVial}{36 / 36}{offline tests passed}
+  \end{minipage}
+  \vspace{0.8cm}
+
+  \begin{tcolorbox}[center,width=14.2cm,colback=kfupmlight,colframe=kfupm,arc=3pt,boxrule=0.8pt,left=10pt,right=10pt]
+  \large
+  \begin{tabular}{@{}c@{\hspace{9pt}}l@{\hspace{12pt}}l@{}}
+   \textcolor{kfupm}{\faUserGraduate}      & Student     & \textbf{\studentName}\\
+   \textcolor{kfupm}{\faIdCard}            & Student ID  & \studentID\\
+   \textcolor{kfupm}{\faGraduationCap}     & Program     & \studentProgram\\
+   \textcolor{kfupm}{\faChalkboardTeacher} & Instructor  & \instructor\\
+   \textcolor{kfupm}{\faRobot}             & Platform    & RoboMaster EP Core, ROS 2 Jazzy, Ubuntu 24.04\\
+   \textcolor{kfupm}{\faCalendarCheck}     & Submitted   & \submitDate
+  \end{tabular}
+  \end{tcolorbox}
+\end{center}
+\restoregeometry
+\end{titlepage}
+
+%============================ CONTENTS & MAP =================================
+\setcounter{page}{2}
+{\hypersetup{linkcolor=ink}\setcounter{tocdepth}{2}\tableofcontents}
+\clearpage
+
+\begin{keybox}{\faClipboardCheck\ \ Deliverables map}
+\small
+\begin{tabularx}{\linewidth}{@{}l>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{4.4cm}@{}}
+\textbf{Item} & \textbf{Content} & \textbf{Location}\\\midrule
+D1 Report & flat inversion (1), boundary matrix (2) and its solver, horizon scaling (3), Table~\ref{tab:table1}
+  with the measured voltages, $v(t)$ and $V_1(t)$ plot (Figure~\ref{fig:vV1}) & this PDF\\
+D2 Code & ROS 2 package \code{rm_flatness_nav}: \code{tag_detector}, \code{flatness_planner}, FSM, flatness and
+  voltage modules, 36 offline tests, launch file, \code{config/robot.yaml} & \link{\repoURL}{\faGithub\ private repository},
+  \code{ros2/rm_flatness_nav/}\\
+D2 Data & \code{motor_voltage_log.csv} of the final run (1\,s rows) plus the 20\,Hz log, all runs, calibration, raw
+  driver and detector logs & repository root and \code{data/}\\
+D3 Video & phone view and robot view side by side, 23.8\,s: (a) sweep while T3 is hidden, (b) centering on T3,
+  (c) cruise and stop at 20\,cm & \link{\videolink}{\faVideo\ demo video} (23.8\,s)\\
+\end{tabularx}
+\end{keybox}
+
+\begin{notebox}
+\small\textbf{\color{kfupmdark}\faInfoCircle\ How the numbers were produced}
+\begin{itemize}
+  \item Every figure, table row and statistic comes from the scripts in \code{analysis/}, run on the raw files in
+        \code{data/}; \code{python3 analysis/run_all.py} regenerates them and writes \code{analysis/results/summary.md}.
+  \item Table~\ref{tab:table1} and the run table are generated from the CSV files as text, so the values are copied
+        verbatim, without rounding or editing.
+  \item Hand measurements (tape standoff after each stop, tag size, range calibration distances) were taken by the
+        student and written into the \code{notes.md} of each run and \code{data/calibration/tag_range.csv};
+        observations read from the terminal during the session (TF readings, arm positions, Wi-Fi events, the 1.80\,m
+        probe, the drive direction test) are recorded verbatim in \code{notes/lab_log.md}.
+  \item Video stills are frames of the submitted demo video; robot photos are in \code{notes/photos/}.
+\end{itemize}
+\end{notebox}
+
+\input{sections/01_overview}
+\input{sections/02_problem1}
+\input{sections/03_problem2}
+\input{sections/04_problem3}
+\input{sections/05_results}
+\input{sections/06_issues}
+\input{sections/07_conclusions}
+
+\end{document}

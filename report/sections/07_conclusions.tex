@@ -1,0 +1,73 @@
+%============================= 7. CONCLUSIONS =================================
+\isec{\faFlagCheckered}{Conclusions}
+\begin{itemize}
+  \item \textbf{Mission completed on the real robot.} In the filmed run the EP swept in place with T3 hidden, centered
+        it, pursued it along a cubic flat-output plan and stopped 20\,cm before it (tape). The two earlier floor runs
+        stopped at 21 and 20\,cm.
+  \item \textbf{Flatness gives speed limits by construction.} With $T=\max(4,1.6(d_0-0.20)/v_{max})$ and
+        $\dot x(0)=0.06$\,m/s the cubic peaks at 0.1371\,m/s for every $d_0>0.6$\,m; the measured command matched it.
+  \item \textbf{Voltage telemetry behaves as the model predicts.} 0.456\,V in a steady search turn, about 1.06\,V at
+        cruise, one-tick spikes at command steps, small negative voltages while braking and exactly 0.000\,V after the
+        halt (Table~\ref{tab:table1}).
+  \item \textbf{Two deviations, both documented.} The assignment arm pose collides with the ToF sensor on this robot, so
+        a hand-set pose 2\,cm higher is used, guarded by the planner. At that pose the camera cannot see the tag at
+        20\,cm, so the camera brake is implemented but the stops come from the plan and odometry.
+  \item \textbf{Possible improvements:} a lower ToF mount that allows the assignment pose (steeper camera, camera
+        brake active), a larger tag for the 1.8\,m end of the range, and measured wheel speeds from the ESCs to compare
+        with the modeled voltages.
+\end{itemize}
+
+\begin{notebox}
+\small\textbf{\color{kfupmdark}\faFolderOpen\ Reproducing the results} (after \code{source ~/rm_setup.sh})
+\begin{itemize}
+  \item Build: \code{cd ~/ros2_ws && colcon build --symlink-install --packages-select rm_flatness_nav}.
+  \item Run: driver in its own terminal, then \code{ros2 launch rm_flatness_nav mission.launch.py}; the run folder with
+        both CSV files is printed at start.
+  \item Offline tests: \code{cd ros2/rm_flatness_nav && python3 -m pytest test} (36 tests).
+  \item Figures, generated tables and \code{analysis/results/summary.md}: \code{python3 analysis/run_all.py}.
+\end{itemize}
+\end{notebox}
+
+%============================== REFERENCES ====================================
+\clearpage
+\isec{\faBook}{References}
+\begingroup\small
+\renewcommand{\section}[2]{}%
+\begin{thebibliography}{99}\setlength{\itemsep}{3pt}
+\bibitem{assign} A.~I. Bhatti, \emph{SCE 672 Advanced Robotics, Term Project Assessment 2: Differential Flatness
+  Pursuit and Motor Voltage Dynamics}, KFUPM, 2026.
+\bibitem{lectures} A.~I. Bhatti, \emph{SCE 672 lecture notes}, Lectures 5A (actuators and wheel kinematics),
+  5B (polynomial trajectories) and 6A (differential flatness), KFUPM, 2026.
+\bibitem{fliess} M.~Fliess, J.~L\'evine, P.~Martin, and P.~Rouchon, ``Flatness and defect of non-linear systems:
+  introductory theory and examples,'' \emph{International Journal of Control}, vol.~61, no.~6, pp.~1327-1361, 1995.
+\bibitem{murray} R.~M. Murray, M.~Rathinam, and W.~Sluis, ``Differential flatness of mechanical control systems: a
+  catalog of prototype systems,'' in \emph{Proc. ASME International Mechanical Engineering Congress and Exposition}, 1995.
+\bibitem{lynch} K.~M. Lynch and F.~C. Park, \emph{Modern Robotics: Mechanics, Planning, and Control}. Cambridge
+  University Press, 2017, Ch.~9 and~13.
+\bibitem{siegwart} R.~Siegwart, I.~R. Nourbakhsh, and D.~Scaramuzza, \emph{Introduction to Autonomous Mobile Robots},
+  2nd ed. MIT Press, 2011.
+\bibitem{olson} E.~Olson, ``AprilTag: A robust and flexible visual fiducial system,'' in \emph{Proc. IEEE International
+  Conference on Robotics and Automation (ICRA)}, 2011, pp.~3400-3407.
+\bibitem{wang} J.~Wang and E.~Olson, ``AprilTag 2: Efficient and robust fiducial detection,'' in \emph{Proc. IEEE/RSJ
+  International Conference on Intelligent Robots and Systems (IROS)}, 2016, pp.~4193-4198.
+\bibitem{pupil} Pupil Labs, \emph{pupil-apriltags: Python bindings for the AprilTag library},
+  \url{https://github.com/pupil-labs/apriltags}.
+\bibitem{corke} P.~Corke, \emph{Robotics, Vision and Control}, 2nd ed. Springer, 2017.
+\bibitem{rmros} J.~Guzzi, \emph{robomaster\_ros: ROS 2 driver for DJI RoboMaster EP and S1},
+  \url{https://github.com/jeguzzi/robomaster_ros}.
+\bibitem{djisdk} DJI, \emph{RoboMaster SDK Documentation}, \url{https://robomaster-dev.readthedocs.io}.
+\bibitem{ros2} S.~Macenski, T.~Foote, B.~Gerkey, C.~Lalancette, and W.~Woodall, ``Robot Operating System 2: Design,
+  architecture, and uses in the wild,'' \emph{Science Robotics}, vol.~7, no.~66, 2022.
+\bibitem{rep103} T.~Foote and M.~Purvis, \emph{REP 103: Standard Units of Measure and Coordinate Conventions},
+  \url{https://www.ros.org/reps/rep-0103.html}.
+\end{thebibliography}
+\endgroup
+
+\begin{notebox}
+\small\textbf{\color{kfupmdark}\faLightbulb\ Acknowledgement of AI assistance.}
+I used Claude (Anthropic) as an assistant in this assessment, at my direction: it wrote the code (the ROS 2 package
+\code{rm_flatness_nav}, the analysis scripts and the helper tools) and drafted this report, explaining each part so
+that I can present and defend it. I performed all hardware setup, every robot run and every measurement (tape
+standoffs, tag size, range calibration), recorded the videos, and reviewed the code, the results and the text against
+the raw logs in the repository.
+\end{notebox}

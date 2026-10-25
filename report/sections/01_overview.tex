@@ -1,0 +1,151 @@
+%============================== 1. OVERVIEW ===================================
+\isec{\faProjectDiagram}{System Overview}
+
+The mission: the robot starts with the target tag T3 out of view, sweeps in place until it sees it, turns in place
+until T3 is centered, follows a cubic flat-output trajectory toward it and brakes 20\,cm before it, while logging the
+four motor armature voltages. Figure~\ref{fig:arena} shows the arena used for the final run.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[x=5.6cm,y=5.6cm,font=\small]
+  % floor grid
+  \fill[kfupmlight!50] (-0.42,-0.42) rectangle (1.95,1.02);
+  \draw[kfupm!12,step=0.1] (-0.42,-0.42) grid (1.95,1.02);
+  % tags (155 mm)
+  \foreach \y/\tn/\tc in {0/T3/kfupm,0.40/T2/accorange,0.80/T1/accorange}{
+    \fill[black] (1.5-0.0775,\y-0.0775) rectangle (1.5+0.0775,\y+0.0775);
+    \fill[white] (1.5-0.045,\y-0.045) rectangle (1.5+0.045,\y+0.045);
+    \fill[black] (1.5-0.025,\y-0.025) rectangle (1.5+0.025,\y+0.025);
+    \node[font=\small\bfseries,text=\tc,right] at (1.59,\y) {\tn};}
+  \node[font=\scriptsize,text=kfupmdark,right] at (1.66,0) {(target, tag36h11 ID 3)};
+  \draw[{Latex[length=2mm]}-{Latex[length=2mm]},muted] (1.42,0.09) -- node[left,font=\scriptsize,text=ink]{40\,cm} (1.42,0.31);
+  \draw[{Latex[length=2mm]}-{Latex[length=2mm]},muted] (1.42,0.49) -- node[left,font=\scriptsize,text=ink]{40\,cm} (1.42,0.71);
+  % robot start (rotated 70 deg clockwise)
+  \begin{scope}[shift={(-0.2,0)},rotate=-70]
+    \draw[ink,thick,fill=muted!35,rounded corners=2pt] (-0.15,-0.12) rectangle (0.15,0.12);
+    \draw[-{Latex[length=2.5mm]},very thick,accred] (0.15,0) -- (0.32,0);
+    \node[font=\scriptsize,text=accred] at (0.40,0) {camera};
+  \end{scope}
+  \draw[dashed,muted,rounded corners=2pt] (-0.35,-0.12) rectangle (-0.05,0.12);
+  \draw[-{Latex[length=2.6mm]},thick,accpurple] (-0.2,0)++(-70:0.27) arc (-70:-8:0.27);
+  \node[font=\scriptsize,text=accpurple,align=left] at (0.31,-0.345) {sweep CCW about $70^\circ$\\(SEARCHING, ALIGNING)};
+  % chassis front and tape distance
+  \draw[{Latex[length=2mm]}-{Latex[length=2mm]},accblue,thick] (-0.05,-0.20) -- node[below,font=\small,text=accblue]{1.50\,m (tape: chassis front to T3 center)} (1.5,-0.20);
+  \draw[dotted,accblue] (-0.05,-0.12) -- (-0.05,-0.22);
+  % planned path and standoff
+  \draw[kfupm,very thick,dash pattern=on 4pt off 2pt] (-0.05,0) -- (1.30,0);
+  \node[font=\scriptsize,text=kfupmdark,above] at (0.60,0.01) {cubic path $z(t)=[x(t),\,0]^T$, body $+X$};
+  \draw[accred,thick] (1.30,-0.11) -- (1.30,0.11);
+  \node[font=\scriptsize,text=accred,above,align=center] at (1.30,0.11) {stop line\\20\,cm};
+  % phone
+  \fill[ink] (0.70,-0.42) rectangle (0.82,-0.37);
+  \node[font=\scriptsize,right,align=left] at (0.84,-0.38) {phone camera, about 1.4\,m to the right of the path};
+\end{tikzpicture}
+\caption{Arena of the final run \code{20261026_015001} (top view, redrawn from \code{notes/final_run_setup.png}).
+The robot starts turned about $70^\circ$ clockwise, so T3 is outside the camera view and the run begins in SEARCHING.
+T1 and T2 are distractor tags; only ID 3 is accepted.}
+\label{fig:arena}
+\end{figure}
+
+\isub{\faSitemap}{Software architecture}
+The package \code{rm_flatness_nav} adds two ROS 2 nodes on top of the \code{robomaster_ros} driver \cite{rmros}
+(Figure~\ref{fig:arch}). The control logic lives in plain Python modules without ROS imports, so the same code runs
+in the offline tests and on the robot.
+\begin{itemize}
+  \item \textbf{\code{tag_detector}:} AprilTag detection \cite{olson,wang} (\code{pupil-apriltags} \cite{pupil}, family \code{tag36h11}) on the newest
+        camera frame, camera pose from the floor tag, ground range $d$ and bearing $\theta$ of T3.
+  \item \textbf{\code{flatness_planner}:} 20\,Hz control loop: arm guard, mission state machine (\code{mission.py}),
+        flat-output plan (\code{flatness.py}), wheel rates and voltages (\code{voltage.py}), CSV and terminal logging.
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=4mm]
+  % host side
+  \node[blk=4.3cm,align=left] (det) {\faCamera\ \textbf{\code{tag_detector}}\\[1pt]\footnotesize
+     newest frame only, 15\,Hz timer\\ pupil-apriltags, ID 3, 155\,mm\\ $d$, $\theta$ in a level camera frame\\
+     image watchdog (re-subscribe)};
+  \node[blk=4.3cm,align=left,below=6mm of det] (pl) {\faCogs\ \textbf{\code{flatness_planner}} (20\,Hz)\\[1pt]\footnotesize
+     arm guard (saved pose $\pm$6\,mm)\\ FSM \code{mission.py}\\ cubic plan \code{flatness.py}\\
+     eq.~(4), (5) \code{voltage.py}};
+  \node[blk=4.3cm,fill=white,below=6mm of pl,align=left] (csv) {\faFileCsv\ \code{motor_voltage_log.csv} (1\,s)\\
+     \faFileCsv\ \code{motor_voltage_full.csv} (20\,Hz)\\ \faTerminal\ live table in the terminal};
+  \begin{scope}[on background layer]
+  \node[grp,fit=(det)(pl)(csv),label={[font=\small\bfseries,text=kfupmdark]above:\faLaptop\ Laptop, ROS 2 Jazzy}] (host) {};
+  \end{scope}
+  % driver
+  \node[blk=3.7cm,right=1.3cm of pl,align=left] (drv) {\faPlug\ \textbf{\code{robomaster_ros}}\\[1pt]\footnotesize
+     SDK client, H.264 decoder\\ \code{cmd_vel} $\rightarrow$ chassis speed\\ odometry, ToF, arm, camera};
+  \node[blk=3.7cm,below=6mm of drv,fill=white,align=left] (rsp) {\faSitemap\ robot\_state\_publisher\\
+     \footnotesize TF (arm TF not used, Sec.~\ref{sec:tf})};
+  % robot
+  \node[blk=3.3cm,right=1.2cm of drv,align=left] (ic) {\faMicrochip\ \textbf{Intelligent Controller}\\[1pt]\footnotesize
+     SDK server, video encoder};
+  \node[blk=3.3cm,below=4mm of ic,align=left,fill=white] (hw) {\faCogs\ 4 Mecanum wheels\\ \faRulerHorizontal\ front ToF\\
+     \faCamera\ camera on the arm};
+  \begin{scope}[on background layer]
+  \node[grp,fit=(ic)(hw),label={[font=\small\bfseries,text=kfupmdark]above:\faRobot\ RoboMaster EP Core}] (robot) {};
+  \end{scope}
+  \draw[biarr,color=accorange] (drv.east) -- node[above,font=\scriptsize,text=accorange]{\faWifi\ Wi-Fi}
+       node[below,lbl]{router\\(STA) mode} (robot.west|-drv.east);
+  \draw[arr] (drv.north) |- node[pos=0.75,above,font=\scriptsize]{images} (det.east);
+  \draw[arr] (det) -- node[right,font=\scriptsize]{\code{tag/range_bearing}} (pl);
+  \draw[arr] ([yshift=-3mm]drv.west) -- node[below,font=\scriptsize]{odom, ToF, arm} ([yshift=-3mm]pl.east);
+  \draw[arr] ([yshift=3mm]pl.east) -- node[above,font=\scriptsize]{\code{cmd_vel}} ([yshift=3mm]drv.west);
+  \draw[arr] (pl) -- (csv);
+\end{tikzpicture}
+\caption{Architecture. The driver owns the robot link and the video decoder; the two package nodes only exchange ROS
+messages with it. The robot was used in router (STA) mode on a home 2.4\,GHz network (Section~\ref{sec:wifi}).}
+\label{fig:arch}
+\end{figure}
+
+\isub{\faProjectDiagram}{ROS 2 graph}
+Figure~\ref{fig:rosgraph} shows the topics that connect the three nodes.
+\begin{figure}[H]
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}
+  \node[rosnode,font=\footnotesize\ttfamily\bfseries,minimum height=9mm] (drv) at (0,0) {robomaster};
+  \node[topic] (info) at (3.0,1.75) {camera/camera\_info};
+  \node[topic] (img) at (3.0,1.1) {camera/image\_color};
+  \node[rosnode,minimum height=8mm] (det) at (6.3,1.4) {tag\_detector};
+  \node[topic] (pt) at (9.4,2.0) {tag/point};
+  \node[topic] (rb) at (9.4,1.4) {tag/range\_bearing};
+  \node[topic,draw=muted!50,text=muted] (dbg) at (9.4,0.8) {tag/debug\_image};
+  \node[rosnode,minimum height=15mm,fill=accblue!10,draw=accblue] (pl) at (12.4,-1.0) {flatness\_planner};
+  \node[topic] (st) at (15.3,-1.0) {mission/state};
+  \node[topic] (odom) at (6.3,-0.5) {odom};
+  \node[topic] (tof) at (6.3,-1.0) {range\_0 (front ToF)};
+  \node[topic] (arm) at (6.3,-1.5) {arm\_position};
+  \node[topic,draw=accred,text=accred] (cmd) at (6.3,-2.5) {cmd\_vel};
+  \node[blk=3.1cm,fill=white,font=\scriptsize,align=left] (files) at (15.3,-2.5) {\faFileCsv\ motor\_voltage\_log.csv\\\faFileCsv\ motor\_voltage\_full.csv};
+  \draw[arr] (drv) |- (info.west); \draw[arr] (drv) |- (img.west);
+  \draw[arr] (img.east) -- (det); \draw[arr] (info.east) -- (det);
+  \draw[arr] (det) -- (rb); \draw[arr] (det.north) |- (pt.west); \draw[arr,muted] (det.south) |- (dbg.west);
+  \draw[arr] (rb.east) -| (pl.north);
+  \draw[arr] (drv) |- (odom.west); \draw[arr] (drv) |- (tof.west); \draw[arr] (drv) |- (arm.west);
+  \draw[arr] (odom.east) -- (odom.east -| pl.west);
+  \draw[arr] (tof.east) -- (tof.east -| pl.west);
+  \draw[arr] (arm.east) -- (arm.east -| pl.west);
+  \draw[arr,accred] (pl.south) |- (cmd.east);
+  \draw[arr,accred] (cmd.west) -| (drv.south);
+  \draw[arr] (pl) -- (st);
+  \draw[arr,dashed] ([yshift=-4mm]pl.east) -| (files.north);
+\end{tikzpicture}}
+\caption{ROS 2 graph during a mission (nodes as ellipses, topics as boxes). The planner is the only publisher of
+\code{cmd_vel}. In dry runs \code{cmd_vel} was remapped so that no command reached the robot.}
+\label{fig:rosgraph}
+\end{figure}
+
+\begin{notebox}
+\small\textbf{\color{kfupmdark}\faCompass\ Frames and sign conventions used in this report}
+\begin{itemize}
+  \item \textbf{Mission frame:} body $+X$ points to the camera and gripper side, toward the tag, as in Figure~1 of the
+        assignment; $+Y$ left; $\omega>0$ counter-clockwise (REP-103). $v$, $\omega$, wheel rates and voltages are
+        all reported in this frame, so $v>0$ means ``toward the tag''.
+  \item \textbf{Driver frame:} on this robot the driver's $+x$ points \emph{away} from the camera (checked with a
+        2\,s wheels-in-the-air test). The planner therefore publishes \code{cmd_vel.linear.x} $=-v$ and leaves
+        $\omega$ unchanged (a counter-clockwise turn moves the camera view left in both frames).
+  \item \textbf{Wheel order:} $1=$ FR, $2=$ FL, $3=$ RL, $4=$ RR, as in eq.~(4) and in the SDK ESC data.
+\end{itemize}
+\end{notebox}
