@@ -11,7 +11,7 @@ import pytest
 
 pupil_apriltags = pytest.importorskip('pupil_apriltags')
 
-from rm_flatness_nav.geometry import range_bearing, transform_point  # noqa: E402
+from rm_flatness_nav.geometry import camera_from_floor_tag, range_bearing, transform_point  # noqa: E402
 
 TAG = cv2.imread(str(Path(__file__).parent / 'data' / 'tag36h11_03.png'), cv2.IMREAD_GRAYSCALE)
 SIZE = 0.155                                                          # measured black edge (m)
@@ -52,3 +52,16 @@ def test_range_and_bearing(x, y):
     d, theta = range_bearing(transform_point(rot, trans, hits[0].pose_t.ravel()))
     assert d == pytest.approx(np.hypot(x, y), rel=0.02)
     assert theta == pytest.approx(np.arctan2(y, x), abs=0.01)
+
+
+@pytest.mark.parametrize('pitch, height', [(10, 0.26), (25, 0.25), (0, 0.27)])
+def test_camera_height_and_pitch_from_floor_tag(pitch, height):
+    rot, trans = camera_pose(pitch, height)
+    det = pupil_apriltags.Detector(families='tag36h11', quad_decimate=1.0)
+    hits = [d for d in det.detect(render_floor_tag(rot, trans, 0.7, 0.05), True,
+                                  (K[0, 0], K[1, 1], K[0, 2], K[1, 2]), SIZE) if d.tag_id == 3]
+    assert hits, 'T3 not detected'
+    h, pitch_down, roll = camera_from_floor_tag(hits[0].pose_R, hits[0].pose_t)
+    assert h == pytest.approx(height, abs=0.01)
+    assert np.degrees(pitch_down) == pytest.approx(pitch, abs=1.5)
+    assert abs(np.degrees(roll)) < 1.5

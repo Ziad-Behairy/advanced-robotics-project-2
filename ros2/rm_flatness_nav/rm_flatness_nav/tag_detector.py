@@ -25,7 +25,7 @@ from sensor_msgs.msg import CameraInfo, Image
 from std_msgs.msg import Float32MultiArray
 from tf2_ros import Buffer, TransformException, TransformListener
 
-from rm_flatness_nav.geometry import quat_to_rot, range_bearing, transform_point
+from rm_flatness_nav.geometry import camera_from_floor_tag, quat_to_rot, range_bearing, transform_point
 
 
 class TagDetector(Node):
@@ -52,6 +52,7 @@ class TagDetector(Node):
         self.latest_image = None
         self.n_frames = 0
         self.n_hits = 0
+        self.floor_est = None       # (height, pitch_down, roll) of the camera, from the floor tag
 
         self.create_subscription(CameraInfo, 'camera/camera_info', self.on_info, 1)
         self.create_subscription(Image, 'camera/image_color', self.on_image, qos_profile_sensor_data)
@@ -131,6 +132,7 @@ class TagDetector(Node):
             self.publish_debug(msg, gray, detections)
         if target is None:
             return
+        self.floor_est = camera_from_floor_tag(target.pose_R, target.pose_t)
 
         try:
             tf = self.tf_buffer.lookup_transform(self.base_frame, msg.header.frame_id, rclpy.time.Time())
@@ -166,8 +168,13 @@ class TagDetector(Node):
         self.debug_pub.publish(out)
 
     def report(self):
-        self.get_logger().info(f'{self.n_frames / 5.0:.1f} frames/s processed, '
-                               f'T{self.target_id} seen in {self.n_hits}')
+        msg = f'{self.n_frames / 5.0:.1f} frames/s processed, T{self.target_id} seen in {self.n_hits}'
+        if self.floor_est is not None:
+            h, pitch, roll = self.floor_est
+            msg += (f' | camera from tag: height {h:.3f} m, pitch {np.degrees(pitch):+.1f} deg down, '
+                    f'roll {np.degrees(roll):+.1f} deg')
+        self.get_logger().info(msg)
+        self.floor_est = None
         self.n_frames = self.n_hits = 0
 
 

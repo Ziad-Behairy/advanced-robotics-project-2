@@ -20,3 +20,19 @@ def range_bearing(p_base):
     """Horizontal distance d and bearing theta (REP-103: + = left) of a point in the base frame."""
     x, y = p_base[0], p_base[1]
     return float(np.hypot(x, y)), float(np.arctan2(y, x))
+
+
+def camera_from_floor_tag(tag_rot, tag_t):
+    """Camera height above the floor, downward pitch and roll, from one tag lying flat on the floor.
+
+    tag_rot, tag_t: tag pose in the camera optical frame (x right, y down, z forward), as pupil-apriltags
+    returns it. The tag normal is the floor normal, so this needs no arm model or TF.
+    """
+    n = np.asarray(tag_rot, dtype=float)[:, 2]
+    t = np.asarray(tag_t, dtype=float).ravel()
+    if n @ t > 0:          # make n point from the floor up toward the camera
+        n = -n
+    height = float(-n @ t)
+    pitch_down = float(np.arcsin(-n[2]))        # optical axis angle below the horizon
+    roll = float(np.arctan2(n[0], -n[1]))       # 0 when the image x axis is level
+    return height, pitch_down, roll
