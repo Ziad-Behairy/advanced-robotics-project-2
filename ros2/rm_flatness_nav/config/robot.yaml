@@ -1,4 +1,4 @@
-# Values measured on Ziad's RoboMaster EP (2026-10-26). See CLAUDE.md / report for how.
+# Values measured on Ziad's RoboMaster EP (2026-10-26). See the report for how they were measured.
 tag_detector:
   ros__parameters:
     target_id: 3

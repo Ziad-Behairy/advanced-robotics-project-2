@@ -21,8 +21,7 @@ video/*.mov
 video/*.mkv
 # Editor settings
 .vscode/
-# Local assistant notes (not part of the submission)
-CLAUDE.md
+# Local files (not part of the submission)
 submission/
 *.egg-info/
 .pytest_cache/
